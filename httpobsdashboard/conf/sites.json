@@ -1,0 +1,20 @@
+{
+  "sites": {
+    "Bedrock (www)": [
+      "mozilla.org",
+      "www.mozilla.com",
+      "www.mozilla.org",
+      "www.firefox.com",
+      "www.getfirefox.com"
+    ],
+    "Observatory": [
+      "http-observatory.security.mozilla.org",
+      "observatory.mozilla.org",
+      "tls-observatory.services.mozilla.com"
+    ],
+    "Tracking Protection": [
+      "shavar.services.mozilla.com",
+      "tracking.services.mozilla.com"
+    ]
+  }
+}

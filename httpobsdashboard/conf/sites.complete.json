@@ -1,0 +1,159 @@
+{
+  "sites": {
+    "Bug Bounty Sites": [],
+    "ABSearch": [
+      "search.services.mozilla.com"
+    ],
+    "Addons": [
+      "addon.mozilla.org",
+      "addons.mozilla.org",
+      "blocklist.addons.mozilla.org",
+      "builder.addons.mozilla.org",
+      "services.addons.mozilla.org",
+      "static.addons.mozilla.net",
+      "versioncheck-bg.addons.mozilla.org",
+      "versioncheck.addons.mozilla.org"
+    ],
+    "Bedrock (www)": [
+      "mozilla.org",
+      "www.mozilla.com",
+      "www.mozilla.org",
+      "www.firefox.com",
+      "www.getfirefox.com"
+    ],
+    "Bugzilla": [
+      "bugzilla.mozilla.org"
+    ],
+    "Downloads (Product Delivery)": [
+      "download-installer.cdn.mozilla.net",
+      "download.mozilla.org"
+    ],
+    "Firefox Accounts": [
+      "accounts.firefox.com",
+      "api.accounts.firefox.com",
+      "oauth.accounts.firefox.com",
+      "profile.accounts.firefox.com",
+      "verifier.accounts.firefox.com"
+    ],
+    "Firefox Hello": [
+      "hello.firefox.com",
+      "loop.services.mozilla.com"
+    ],
+    "Firefox Sync": [
+      "sync-264-us-west-2.sync.services.mozilla.com",
+      "token.services.mozilla.com"
+    ],
+    "Firefox Updates (AUS/Balrog)": [
+      "aus.mozilla.org",
+      "aus3.mozilla.org",
+      "aus4.mozilla.org",
+      "aus5.mozilla.org"
+    ],
+    "Location (MLS)": [
+      "location.services.mozilla.com",
+      "location-leaderboard.services.mozilla.com"
+    ],
+    "Marketplace": [
+      "marketplace.firefox.com",
+      "receiptcheck.marketplace.firefox.com",
+      "static.marketplace.firefox.com"
+    ],
+    "Observatory": [
+      "http-observatory.security.mozilla.org",
+      "observatory.mozilla.org",
+      "tls-observatory.services.mozilla.com"
+    ],
+    "Persona": [
+      "browserid.org",
+      "www.browserid.org",
+      "firefoxos.persona.org",
+      "persona.org",
+      "www.persona.org",
+      "static.login.persona.org",
+      "verifier.login.persona.org",
+      "yahoo.login.persona.org",
+      "gmail.login.persona.org",
+      "login.anosrep.org",
+      "login.mozilla.org",
+      "login.persona.org",
+      "diresworb.org"
+    ],
+    "Push": [
+      "push.services.mozilla.com",
+      "updates.push.services.mozilla.com"
+    ],
+    "Single Sign-On": [
+      "sso.mozilla.com"
+    ],
+    "Telemetry": [
+      "incoming.telemetry.mozilla.org",
+      "telemetry-experiment.cdn.mozilla.net",
+      "analysis.telemetry.mozilla.org",
+      "sql.telemetry.mozilla.org",
+      "metrics.services.mozilla.com"
+    ],
+    "Test Pilot": [
+      "testpilot.firefox.com"
+    ],
+    "Tiles": [
+      "tiles.cdn.mozilla.net",
+      "tiles.services.mozilla.com"
+    ],
+    "Tracking Protection": [
+      "shavar.services.mozilla.com",
+      "tracking.services.mozilla.com"
+    ],
+    "Non-Bounty Sites": [],
+    "Blogs": [
+      "blog.sensorweb.io",
+      "blog.getfirebug.com",
+      "blog.mozilla.com",
+      "blog.mozilla.org",
+      "blog.seamonkey-project.org"
+    ],
+    "Branding & Marketing": [
+      "assets.mozilla.org"
+    ],
+    "Documentation": [
+      "developer.mozilla.org",
+      "wiki.mozilla.org"
+    ],
+    "Miscellaneous": [
+      "air.mozilla.org",
+      "careers.mozilla.org",
+      "contributejson.org",
+      "ftp.mozilla.org",
+      "mozillians.org",
+      "publicsuffix.org",
+      "qsurvey.mozilla.com"
+    ],
+    "Public Relations & PR Campaigns": [
+      "advocacy.mozilla.org",
+      "codemoji.org",
+      "fundraising.mozilla.org",
+      "games.mozilla.org",
+      "learning.mozilla.org"
+    ],
+    "Redirectors": [
+      "click.e.mozilla.org",
+      "mzl.la",
+      "outgoing.mozilla.org"
+    ],
+    "Source Control": [
+      "dxr.mozilla.org",
+      "hg.mozilla.org",
+      "svn.mozilla.org"
+    ],
+    "Status Dashboards": [
+      "treestatus.mozilla.org"
+    ],
+    "Telemetry": [
+      "analysis.telemetry.mozilla.org",
+      "telemetry.mozilla.org"
+    ],
+    "Vidyo": [
+      "v.mozilla.com",
+      "vreplay.mozilla.com"
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+
+    <title>Observatory Dashboard</title>
+
+    <link rel="stylesheet" href="css/bootstrap-3.3.6.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/httpobs-dashboard.css" type="text/css" />
+</head>
+<body>
+    <div id="dashboard-results" class="col-md-10 col-md-offset-1">
+
+    {% for group in sites %}
+        {% if sites[group]|length == 0 %}
+        <h2>{{ group }}</h2>
+        <hr>
+        {% else %}
+
+
+        <table class="table table-striped table-condensed table-group">
+            <thead>
+                <tr>
+                    <th><h3>{{ group }}</h3></th>
+                    <th class="text-center">CSP</th>
+                    <th class="text-center">HSTS</th>
+                    <th class="text-center">SRI</th>
+                    <th class="text-center">XFO</th>
+                    <th class="text-center">Grade</th>
+                    <th class="text-center">HTTPS</th>
+                    <th class="text-center">TLS Config</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for site in sites[group] %}
+                {% for hostname, results in site.items() %}
+                <tr>
+                    <td><a href="{% if results.tlsobs.data.has_tls %}https{% else %}http{% endif %}://{{hostname}}/">{{ hostname }}</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="{{ results.httpobs.tests['content-security-policy'].pass }}">
+                        {% if results.httpobs.tests['content-security-policy'].pass %}Yes{% elif results.httpobs.tests['content-security-policy'].pass == None %}N/A{% else %}No{% endif %}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="{{ results.httpobs.tests['strict-transport-security'].pass }}">
+                        {% if results.httpobs.tests['strict-transport-security'].pass %}Yes{% elif results.httpobs.tests['strict-transport-security'].pass == None %}N/A{% else %}No{% endif %}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="{{ results.httpobs.tests['subresource-integrity'].pass }}">
+                        {% if results.httpobs.tests['subresource-integrity'].pass %}Yes{% elif results.httpobs.tests['subresource-integrity'].pass == None %}N/A{% else %}No{% endif %}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="{{ results.httpobs.tests['x-frame-options'].pass }}">
+                        {% if results.httpobs.tests['x-frame-options'].pass %}Yes{% elif results.httpobs.tests['x-frame-options'].pass == None %}N/A{% else %}No{% endif %}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-grade="{{ results.httpobs.grade }}" data-score="{{ results.httpobs.score }}">
+                            {% if results.httpobs.grade %}{{ results['httpobs']['grade'] }}{% else %}N/A{% endif %}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="{{ results.tlsobs.data.has_tls }}">
+                            {% if results.tlsobs.data.has_tls %}Yes{% else %}No{% endif %}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="{{ results.tlsobs.pass }}">
+                            {{ results.tlsobs.grade }}
+                        </span>
+                    </td>
+                </tr>
+                {% endfor %}
+            {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div id="dashboard-date" class="col-md-10 col-md-offset-1 text-center text-muted">Report generated: {{ DATE }}</div>
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap-3.3.6.min.js"></script>
+    <script src="js/lodash-4.13.1.min.js"></script>
+    <script src="js/moment-2.14.1.min.js"></script>
+</body>
+</html>

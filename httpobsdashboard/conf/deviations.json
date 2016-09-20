@@ -1,0 +1,17 @@
+{
+  "api.accounts.firefox.com": ["API", "Cloud Services"],
+  "loop.services.mozilla.com": ["API", "Cloud Services"],
+  "mozilla.org": ["Windows XP Support"],
+  "oauth.accounts.firefox.com": ["API", "Cloud Services"],
+  "profile.accounts.firefox.com": ["API", "Cloud Services"],
+  "push.services.mozilla.com": ["API", "Cloud Services"],
+  "search.services.mozilla.com": ["API", "Cloud Services"],
+  "shavar.services.mozilla.com": ["API", "Cloud Services"],
+  "sync-264-us-west-2.sync.services.mozilla.com": ["API", "Cloud Services"],
+  "tiles.services.mozilla.com": ["API", "Cloud Services"],
+  "tls-observatory.services.mozilla.com": ["API", "Cloud Services"],
+  "token.services.mozilla.com": ["API", "Cloud Services"],
+  "tracking.services.mozilla.com": ["API", "Cloud Services"],
+  "updates.push.services.mozilla.com": ["API", "Cloud Services"],
+  "verifier.accounts.firefox.com": ["API", "Cloud Services"]
+}
