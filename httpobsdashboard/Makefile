@@ -11,7 +11,7 @@ devserver:
 	$(PY) devserver.py
 
 deploy:
-	git subtree push --prefix dist origin gh-pages
+	cd .. && git subtree push --prefix httpobsdashboard/dist origin gh-pages
 
 publish:
 	PYTHONPATH='..' $(PY) run.py www-generate

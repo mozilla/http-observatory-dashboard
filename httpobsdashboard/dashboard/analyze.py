@@ -44,6 +44,12 @@ def analyze(host, raw_output: dict) -> dict:
     if not deviated_output['tlsobs']['has_tls']:
         result['level'] = 'No HTTPS'
 
+    # Make SRI N/A if there are no external scripts
+    if deviated_output['httpobs']['tests']['subresource-integrity']['result'] in \
+            ['sri-not-implemented-but-all-scripts-loaded-from-secure-origin',
+             'sri-not-implemented-but-no-scripts-loaded']:
+        deviated_output['httpobs']['tests']['subresource-integrity']['pass'] = None
+
     # Rescore the site
     score = max(0, 100 + sum([test['score_modifier'] for test in deviated_output['httpobs']['tests'].values()]))
     grade = GRADE_CHART[min(100, score)] if deviated_output['httpobs']['scan']['grade'] else None
