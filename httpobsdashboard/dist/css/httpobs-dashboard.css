@@ -35,12 +35,11 @@ span[data-pass="None"], span[data-grade="None"] {
     border-color: #555;
 }
 
-
 .table-group tr td:nth-child(1) {
     vertical-align: middle;
     width: 18em;
 }
 
-.table-group tr td:nth-child(8) span {
-    width: 10em;
+.table-group tr td:nth-child(7) {
+     border-left: solid 2px #dddddd;
 }

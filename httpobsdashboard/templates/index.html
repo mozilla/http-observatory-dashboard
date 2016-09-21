@@ -30,7 +30,7 @@
                     <th class="text-center">XFO</th>
                     <th class="text-center">Grade</th>
                     <th class="text-center">HTTPS</th>
-                    <th class="text-center">TLS Config</th>
+                    <th class="text-center">Compliant</th>
                 </tr>
             </thead>
             <tbody>
@@ -69,8 +69,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-pass="{{ results.tlsobs.pass }}">
-                            {{ results.tlsobs.grade }}
+                        <span class="grade" data-compliance-level="{{ results.tlsobs.grade }}" data-pass="{{ results.tlsobs.pass }}">
+                            {% if results.tlsobs.pass %}Yes{% else %}No{% endif %}
                         </span>
                     </td>
                 </tr>
