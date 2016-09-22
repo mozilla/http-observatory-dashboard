@@ -26,7 +26,7 @@ GRADE_CHART = {
 }
 
 
-def analyze(host, raw_output: dict) -> dict:
+def analyze(host, raw_output):
     # Find the right TLS Observatory Analyzer
     result = {}
     for analysis in raw_output.get('tlsobs', {}).get('analysis', {}):

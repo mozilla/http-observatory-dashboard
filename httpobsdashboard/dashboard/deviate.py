@@ -43,7 +43,7 @@ REASONS = {
 }
 
 
-def __destructive_merge(d1: dict, d2: dict, path=None) -> dict:
+def __destructive_merge(d1, d2, path=None):
     """Recursively merges d2 into d1, overwriting existing values"""
     if path is None:
         path = []
@@ -59,11 +59,11 @@ def __destructive_merge(d1: dict, d2: dict, path=None) -> dict:
     return d1
 
 
-def deviate(host, results: dict) -> dict:
-    # See if the host is in deviations.json
-    deviations = httpobsdashboard.conf.deviations.get(host, [])
+def deviate(host, results):
+    # See if the host is in site-deviations.json
+    deviations = httpobsdashboard.conf.site_deviations.get(host, [])
 
     for deviation in deviations:
-        results = __destructive_merge(results, REASONS[deviation])
+        results = __destructive_merge(results, httpobsdashboard.conf.deviations[deviation])
 
     return results
