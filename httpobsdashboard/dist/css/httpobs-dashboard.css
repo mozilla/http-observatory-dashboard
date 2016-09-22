@@ -40,6 +40,6 @@ span[data-pass="None"], span[data-grade="None"] {
     width: 18em;
 }
 
-.table-group tr td:nth-child(7) {
+.table-group tr td:nth-child(8) {
      border-left: solid 2px #dddddd;
 }

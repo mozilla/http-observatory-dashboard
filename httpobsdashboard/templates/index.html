@@ -27,6 +27,7 @@
                     <th class="text-center">CSP</th>
                     <th class="text-center">HSTS</th>
                     <th class="text-center">SRI</th>
+                    <th class="text-center">XCTO</th>
                     <th class="text-center">XFO</th>
                     <th class="text-center">Grade</th>
                     <th class="text-center">HTTPS</th>
@@ -51,6 +52,11 @@
                     <td class="text-center">
                         <span class="grade" data-pass="{{ results.httpobs.tests['subresource-integrity'].pass }}">
                         {% if results.httpobs.tests['subresource-integrity'].pass %}Yes{% elif results.httpobs.tests['subresource-integrity'].pass == None %}N/A{% else %}No{% endif %}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="{{ results.httpobs.tests['x-content-type-options'].pass }}">
+                        {% if results.httpobs.tests['x-content-type-options'].pass %}Yes{% elif results.httpobs.tests['x-content-type-options'].pass == None %}N/A{% else %}No{% endif %}
                         </span>
                     </td>
                     <td class="text-center">
