@@ -5,9 +5,10 @@ from subprocess import call
 def twiddlethumbs():
     pass
 
+
 def regen():
-    print('Regenerating via "make publish"')
-    call(['make', 'publish'])
+    print('Regenerating via "make www-generate"')
+    call(['make', 'www-generate'])
 
 
 server = Server()
