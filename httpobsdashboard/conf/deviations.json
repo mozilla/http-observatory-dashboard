@@ -1,0 +1,40 @@
+{
+  "API": {
+    "httpobs": {
+      "tests": {
+        "content-security-policy": {
+          "pass": null,
+          "score_description": "APIs don't contain active content and don't need CSP.",
+          "score_modifier": 0
+        },
+        "subresource-integrity": {
+          "pass": null,
+          "score_description": "APIs don't utilize subresources.",
+          "score_modifier": 0
+        },
+        "x-frame-options": {
+          "pass": null,
+          "score_description": "APIs don't have content to frame.",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "pass": null,
+          "score_description": "APIs don't contain active content and don't need XXSSP.",
+          "score_modifier": 0
+        }
+      }
+    }
+  },
+  "Cloud Services": {
+    "httpobs": {
+      "scan": {
+        "grade": null
+      }
+    }
+  },
+  "Windows XP Support": {
+    "tlsobs": {
+      "pass": true
+    }
+  }
+}
