@@ -1,4 +1,4 @@
-PY?=python3
+PY?=python
 
 help:
 	@echo 'Makefile to create the HTTP Observatory website'
@@ -13,5 +13,10 @@ devserver:
 deploy:
 	cd .. && git subtree push --prefix httpobsdashboard/dist origin gh-pages
 
-publish:
+generate: json-generate www-generate
+
+json-generate:
+	PYTHONPATH='..' $(PY) run.py json-generate
+
+www-generate:
 	PYTHONPATH='..' $(PY) run.py www-generate
