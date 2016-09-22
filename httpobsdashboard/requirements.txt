@@ -1,2 +1,4 @@
 grequests
+jinja2
+livereload
 requests
