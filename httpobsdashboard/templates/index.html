@@ -40,32 +40,32 @@
                 <tr>
                     <td><a href="{% if results.tlsobs.data.has_tls %}https{% else %}http{% endif %}://{{hostname}}/">{{ hostname }}</a></td>
                     <td class="text-center">
-                        <span class="grade" data-pass="{{ results.httpobs.tests['content-security-policy'].pass }}">
+                        <span class="grade" data-content="{{ results.httpobs.tests['content-security-policy'].score_description }}" data-pass="{{ results.httpobs.tests['content-security-policy'].pass }}" data-toggle="popover">
                         {% if results.httpobs.tests['content-security-policy'].pass %}Yes{% elif results.httpobs.tests['content-security-policy'].pass == None %}N/A{% else %}No{% endif %}
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-pass="{{ results.httpobs.tests['strict-transport-security'].pass }}">
+                        <span class="grade" data-content="{{ results.httpobs.tests['strict-transport-security'].score_description }}" data-pass="{{ results.httpobs.tests['strict-transport-security'].pass }}" data-toggle="popover">
                         {% if results.httpobs.tests['strict-transport-security'].pass %}Yes{% elif results.httpobs.tests['strict-transport-security'].pass == None %}N/A{% else %}No{% endif %}
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-pass="{{ results.httpobs.tests['subresource-integrity'].pass }}">
+                        <span class="grade" data-content="{{ results.httpobs.tests['subresource-integrity'].score_description }}" data-pass="{{ results.httpobs.tests['subresource-integrity'].pass }}" data-toggle="popover">
                         {% if results.httpobs.tests['subresource-integrity'].pass %}Yes{% elif results.httpobs.tests['subresource-integrity'].pass == None %}N/A{% else %}No{% endif %}
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-pass="{{ results.httpobs.tests['x-content-type-options'].pass }}">
+                        <span class="grade" data-content="{{ results.httpobs.tests['x-content-type-options'].score_description }}" data-pass="{{ results.httpobs.tests['x-content-type-options'].pass }}" data-toggle="popover">
                         {% if results.httpobs.tests['x-content-type-options'].pass %}Yes{% elif results.httpobs.tests['x-content-type-options'].pass == None %}N/A{% else %}No{% endif %}
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-pass="{{ results.httpobs.tests['x-frame-options'].pass }}">
+                        <span class="grade" data-content="{{ results.httpobs.tests['x-frame-options'].score_description }}" data-pass="{{ results.httpobs.tests['x-frame-options'].pass }}" data-toggle="popover">
                         {% if results.httpobs.tests['x-frame-options'].pass %}Yes{% elif results.httpobs.tests['x-frame-options'].pass == None %}N/A{% else %}No{% endif %}
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-grade="{{ results.httpobs.grade }}" data-score="{{ results.httpobs.score }}">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host={{ hostname }}'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="{{ results.httpobs.grade }}" data-score="{{ results.httpobs.score }}" data-toggle="popover">
                             {% if results.httpobs.grade %}{{ results['httpobs']['grade'] }}{% else %}N/A{% endif %}
                         </span>
                     </td>
@@ -75,7 +75,7 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-compliance-level="{{ results.tlsobs.grade }}" data-pass="{{ results.tlsobs.pass }}">
+                        <span class="grade" data-compliance-level="{{ results.tlsobs.grade }}" data-content="This site's TLS configuration is rated as: <strong>{{ results.tlsobs.grade|lower }}</strong>" data-pass="{{ results.tlsobs.pass }}" data-toggle="popover">
                             {% if results.tlsobs.pass %}Yes{% else %}No{% endif %}
                         </span>
                     </td>
@@ -93,5 +93,6 @@
     <script src="js/bootstrap-3.3.6.min.js"></script>
     <script src="js/lodash-4.13.1.min.js"></script>
     <script src="js/moment-2.14.1.min.js"></script>
+    <script src="js/httpobs-dashboard.js"></script>
 </body>
 </html>
