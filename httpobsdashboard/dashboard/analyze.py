@@ -45,7 +45,7 @@ def analyze(host, raw_output):
         result['level'] = 'No HTTPS'
 
     # Make SRI N/A if there are no external scripts
-    if deviated_output['httpobs']['tests']['subresource-integrity']['result'] in \
+    if deviated_output['httpobs']['tests']['subresource-integrity'].get('result') in \
             ['sri-not-implemented-but-all-scripts-loaded-from-secure-origin',
              'sri-not-implemented-but-no-scripts-loaded']:
         deviated_output['httpobs']['tests']['subresource-integrity']['pass'] = None

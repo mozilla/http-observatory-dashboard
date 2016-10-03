@@ -39,8 +39,42 @@ def __get_http_observatory(host):
             r['scan'] = __poll(url, 'state', None, 'GET', None, None, 300, 0)
 
         # Retrieve the individual test results
-        url = api_url + '/getScanResults?scan=' + str(r['scan']['scan_id'])
-        r['tests'] = __poll(url, 'content-security-policy')
+        if r['scan']['state'] == 'FAILED':
+             r['tests'] = {
+                    'content-security-policy': {
+                        'pass': None,
+                        'score_description': 'Site down',
+                        'score_modifier': 0
+                    },
+                    'strict-transport-security': {
+                        'pass': None,
+                        'score_description': 'Site down',
+                        'score_modifier': 0
+                    },
+                    'subresource-integrity': {
+                        'pass': None,
+                        'score_description': 'Site down',
+                        'score_modifier': 0
+                    },
+                    'x-content-type-options': {
+                     'pass': None,
+                     'score_description': 'Site down',
+                     'score_modifier': 0
+                    },
+                    'x-frame-options': {
+                        'pass': None,
+                        'score_description': 'Site down',
+                        'score_modifier': 0
+                    },
+                    'x-xss-protection': {
+                        'pass': None,
+                        'score_description': 'Site down',
+                        'score_modifier': 0
+                    }
+             }
+        else:
+            url = api_url + '/getScanResults?scan=' + str(r['scan']['scan_id'])
+            r['tests'] = __poll(url, 'content-security-policy')
 
     except requests.exceptions.RequestException:
         pass
@@ -86,15 +120,33 @@ def __poll(url, key, values=None, method='GET', headers=None, data=None, timeout
     while True:
         # Retrieve the URL
         if method == 'POST':
-            r = s.post(url, data=data).json()
+            r = s.post(url, data=data, timeout=timeout).json()
         else:
-            r = s.get(url).json()
+            r = s.get(url, timeout=timeout).json()
 
-        # See if error is in there; if so, we just abort the whole thing
+        # See if error is in there; if so, we just NA everything
         if 'error' in r:
             print('\nUnable to get result from the HTTP Observatory @ {url}. Error: {error}.'.format(error=r['error'],
                                                                                                      url=url))
-            sys.exit(1)
+            # If things error out in the HTTP Observatory analyzer
+            if HTTPOBS_API_URL + '/analyze' in url:
+                return {
+                           'grade': None,
+                           'state': 'FAILED'
+                       }
+            # The TLS Observatory
+            elif TLSOBS_API_URL in url:
+                return {
+                    'tlsobs': {
+                        'has_tls': None,
+                        'pass': None
+                    }
+                }
+
+            # Some unknown condition
+            else:
+                print('Exiting')
+                sys.exit(1)
 
         # See if the key is one of the pollable values
         if values:

@@ -58,7 +58,7 @@ if __name__ == '__main__':
         config = {
             'AUTHOR': 'April King',
             'DATE': today,
-            'SITENAME': 'Mozilla Observatory dashboard',
+            'SITENAME': 'Mozilla Observatory Dashboard',
             'sites': sites
         }
 
