@@ -1,7 +1,9 @@
 {
   "api.accounts.firefox.com": ["API", "Cloud Services"],
+  "archive.mozilla.org": ["Windows XP Support"],
   "loop.services.mozilla.com": ["API", "Cloud Services"],
   "download-installer.cdn.mozilla.net": ["Windows XP Support"],
+  "download.cdn.mozilla.net": ["Windows XP Support"],
   "download.mozilla.org": ["Windows XP Support"],
   "mozilla.org": ["Windows XP Support"],
   "oauth.accounts.firefox.com": ["API", "Cloud Services"],

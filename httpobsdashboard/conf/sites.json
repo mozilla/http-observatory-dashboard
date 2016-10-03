@@ -7,6 +7,7 @@
     "Addons": [
       "addon.mozilla.org",
       "addons.mozilla.org",
+      "addons.cdn.mozilla.net",
       "blocklist.addons.mozilla.org",
       "builder.addons.mozilla.org",
       "services.addons.mozilla.org",
@@ -22,10 +23,13 @@
       "www.getfirefox.com"
     ],
     "Bugzilla": [
-      "bugzilla.mozilla.org"
+      "bugzilla.mozilla.org",
+      "bugzilla-dev.allizom.org"
     ],
     "Downloads (Product Delivery)": [
+      "archive.mozilla.org",
       "download-installer.cdn.mozilla.net",
+      "download.cdn.mozilla.net",
       "download.mozilla.org"
     ],
     "Firefox Accounts": [
@@ -114,9 +118,16 @@
     "Branding & Marketing": [
       "assets.mozilla.org"
     ],
+    "Communication Tools": [
+      "www.standu.ps"
+    ],
     "Documentation": [
       "developer.mozilla.org",
       "wiki.mozilla.org"
+    ],
+    "Mailing Lists": [
+      "lists.mozilla.org",
+      "mail.mozilla.org"
     ],
     "Miscellaneous": [
       "air.mozilla.org",
@@ -124,6 +135,7 @@
       "contributejson.org",
       "ftp.mozilla.org",
       "mozillians.org",
+      "people.mozilla.org",
       "publicsuffix.org"
     ],
     "Public Relations & PR Campaigns": [
@@ -149,6 +161,7 @@
     ],
     "Status Dashboards": [
       "arewefastyet.com",
+      "riskheatmap.security.mozilla.org",
       "treestatus.mozilla.org"
     ],
     "Telemetry": [
