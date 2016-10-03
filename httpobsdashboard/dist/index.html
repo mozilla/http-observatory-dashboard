@@ -111,7 +111,7 @@
                 <tr>
                     <td><a href="https://addon.mozilla.org/">addon.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented with &#39;unsafe-inline&#39; inside style-src" data-pass="True" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented with unsafe sources inside style-src. This includes &#39;unsafe-inline&#39;, data: or overly broad sources such as https:." data-pass="True" data-toggle="popover">
                         Yes
                         </span>
                     </td>
@@ -157,7 +157,7 @@
                 <tr>
                     <td><a href="https://addons.mozilla.org/">addons.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented with &#39;unsafe-inline&#39; inside style-src" data-pass="True" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented with unsafe sources inside style-src. This includes &#39;unsafe-inline&#39;, data: or overly broad sources such as https:." data-pass="True" data-toggle="popover">
                         Yes
                         </span>
                     </td>
@@ -201,9 +201,55 @@
             
                 
                 <tr>
+                    <td><a href="https://addons.cdn.mozilla.net/">addons.cdn.mozilla.net</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Content Security Policy (CSP) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="HTTP Strict Transport Security (HSTS) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="/ did not return a status code of 200" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Frame-Options (XFO) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=addons.cdn.mozilla.net'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="F" data-score="5" data-toggle="popover">
+                            F
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="True">
+                            Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-compliance-level="Intermediate" data-content="This site's TLS configuration is rated as: <strong>intermediate</strong>" data-pass="True" data-toggle="popover">
+                            Yes
+                        </span>
+                    </td>
+                </tr>
+                
+            
+                
+                <tr>
                     <td><a href="https://blocklist.addons.mozilla.org/">blocklist.addons.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented with &#39;unsafe-inline&#39; inside style-src" data-pass="True" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented with unsafe sources inside style-src. This includes &#39;unsafe-inline&#39;, data: or overly broad sources such as https:." data-pass="True" data-toggle="popover">
                         Yes
                         </span>
                     </td>
@@ -502,7 +548,7 @@
                 <tr>
                     <td><a href="https://mozilla.org/">mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -517,8 +563,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
-                        No
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
                         </span>
                     </td>
                     <td class="text-center">
@@ -527,8 +573,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="C" data-score="60" data-toggle="popover">
-                            C
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="B" data-score="75" data-toggle="popover">
+                            B
                         </span>
                     </td>
                     <td class="text-center">
@@ -548,7 +594,7 @@
                 <tr>
                     <td><a href="https://www.mozilla.com/">www.mozilla.com</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -558,13 +604,13 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin" data-pass="None" data-toggle="popover">
-                        N/A
+                        <span class="grade" data-content="Subresource Integrity (SRI) not implemented, but all external scripts are loaded over https" data-pass="False" data-toggle="popover">
+                        No
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
-                        No
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
                         </span>
                     </td>
                     <td class="text-center">
@@ -573,8 +619,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=www.mozilla.com'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="D" data-score="40" data-toggle="popover">
-                            D
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=www.mozilla.com'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="C" data-score="50" data-toggle="popover">
+                            C
                         </span>
                     </td>
                     <td class="text-center">
@@ -594,7 +640,7 @@
                 <tr>
                     <td><a href="https://www.mozilla.org/">www.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -609,8 +655,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
-                        No
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
                         </span>
                     </td>
                     <td class="text-center">
@@ -619,7 +665,7 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=www.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="B" data-score="65" data-toggle="popover">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=www.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="B" data-score="80" data-toggle="popover">
                             B
                         </span>
                     </td>
@@ -640,7 +686,7 @@
                 <tr>
                     <td><a href="https://www.firefox.com/">www.firefox.com</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -650,13 +696,13 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin" data-pass="None" data-toggle="popover">
-                        N/A
+                        <span class="grade" data-content="Subresource Integrity (SRI) not implemented, but all external scripts are loaded over https" data-pass="False" data-toggle="popover">
+                        No
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
-                        No
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
                         </span>
                     </td>
                     <td class="text-center">
@@ -665,8 +711,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=www.firefox.com'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="D" data-score="40" data-toggle="popover">
-                            D
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=www.firefox.com'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="C" data-score="50" data-toggle="popover">
+                            C
                         </span>
                     </td>
                     <td class="text-center">
@@ -686,7 +732,7 @@
                 <tr>
                     <td><a href="https://www.getfirefox.com/">www.getfirefox.com</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -696,13 +742,13 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin" data-pass="None" data-toggle="popover">
-                        N/A
+                        <span class="grade" data-content="Subresource Integrity (SRI) not implemented, but all external scripts are loaded over https" data-pass="False" data-toggle="popover">
+                        No
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
-                        No
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
                         </span>
                     </td>
                     <td class="text-center">
@@ -711,7 +757,7 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=www.getfirefox.com'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="C" data-score="45" data-toggle="popover">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=www.getfirefox.com'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="C" data-score="55" data-toggle="popover">
                             C
                         </span>
                     </td>
@@ -797,6 +843,52 @@
                 </tr>
                 
             
+                
+                <tr>
+                    <td><a href="https://bugzilla-dev.allizom.org/">bugzilla-dev.allizom.org</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-eval&#39;" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)" data-pass="True" data-toggle="popover">
+                        Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Subresource Integrity (SRI) not implemented, but all external scripts are loaded over https" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Frame-Options (XFO) header set to SAMEORIGIN or DENY" data-pass="True" data-toggle="popover">
+                        Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=bugzilla-dev.allizom.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="A" data-score="85" data-toggle="popover">
+                            A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="True">
+                            Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-compliance-level="Non-compliant" data-content="This site's TLS configuration is rated as: <strong>non-compliant</strong>" data-pass="False" data-toggle="popover">
+                            No
+                        </span>
+                    </td>
+                </tr>
+                
+            
             </tbody>
         </table>
         
@@ -819,6 +911,52 @@
                 </tr>
             </thead>
             <tbody>
+            
+                
+                <tr>
+                    <td><a href="https://archive.mozilla.org/">archive.mozilla.org</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Content Security Policy (CSP) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="HTTP Strict Transport Security (HSTS) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Subresource Integrity (SRI) is not needed since site contains no script tags" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Frame-Options (XFO) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=archive.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="F" data-score="0" data-toggle="popover">
+                            F
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="True">
+                            Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-compliance-level="Bad" data-content="This site's TLS configuration is rated as: <strong>bad</strong>" data-pass="True" data-toggle="popover">
+                            Yes
+                        </span>
+                    </td>
+                </tr>
+                
             
                 
                 <tr>
@@ -868,9 +1006,55 @@
             
                 
                 <tr>
+                    <td><a href="https://download.cdn.mozilla.net/">download.cdn.mozilla.net</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Content Security Policy (CSP) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="HTTP Strict Transport Security (HSTS) header cannot be set for sites not available over https" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Subresource Integrity (SRI) is not needed since site contains no script tags" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Frame-Options (XFO) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=download.cdn.mozilla.net'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="F" data-score="0" data-toggle="popover">
+                            F
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="True">
+                            Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-compliance-level="Bad" data-content="This site's TLS configuration is rated as: <strong>bad</strong>" data-pass="True" data-toggle="popover">
+                            Yes
+                        </span>
+                    </td>
+                </tr>
+                
+            
+                
+                <tr>
                     <td><a href="https://download.mozilla.org/">download.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -885,8 +1069,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
-                        No
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
                         </span>
                     </td>
                     <td class="text-center">
@@ -895,8 +1079,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=download.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="C" data-score="55" data-toggle="popover">
-                            C
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=download.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="B" data-score="70" data-toggle="popover">
+                            B
                         </span>
                     </td>
                     <td class="text-center">
@@ -1158,7 +1342,7 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-compliance-level="Bad" data-content="This site's TLS configuration is rated as: <strong>bad</strong>" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-compliance-level="Non-compliant" data-content="This site's TLS configuration is rated as: <strong>non-compliant</strong>" data-pass="False" data-toggle="popover">
                             No
                         </span>
                     </td>
@@ -1422,7 +1606,7 @@
                 <tr>
                     <td><a href="http://aus.mozilla.org/">aus.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -1437,8 +1621,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
-                        No
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
                         </span>
                     </td>
                     <td class="text-center">
@@ -1447,8 +1631,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=aus.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="D" data-score="35" data-toggle="popover">
-                            D
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=aus.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="C" data-score="50" data-toggle="popover">
+                            C
                         </span>
                     </td>
                     <td class="text-center">
@@ -1905,7 +2089,7 @@
                 <tr>
                     <td><a href="https://http-observatory.security.mozilla.org/">http-observatory.security.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented without &#39;unsafe-inline&#39; or &#39;unsafe-eval&#39;" data-pass="True" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented with default-src &#39;none&#39; and no &#39;unsafe&#39;" data-pass="True" data-toggle="popover">
                         Yes
                         </span>
                     </td>
@@ -1930,7 +2114,7 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=http-observatory.security.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="A+" data-score="105" data-toggle="popover">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=http-observatory.security.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="A+" data-score="115" data-toggle="popover">
                             A+
                         </span>
                     </td>
@@ -2986,7 +3170,7 @@
                 <tr>
                     <td><a href="https://testpilot.firefox.com/">testpilot.firefox.com</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows resources to be loaded from http" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but secure site allows resources to be loaded from http" data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -3336,7 +3520,7 @@
                 <tr>
                     <td><a href="https://blog.getfirebug.com/">blog.getfirebug.com</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -3382,7 +3566,7 @@
                 <tr>
                     <td><a href="https://blog.mozilla.com/">blog.mozilla.com</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -3428,7 +3612,7 @@
                 <tr>
                     <td><a href="https://blog.mozilla.org/">blog.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -3474,7 +3658,7 @@
                 <tr>
                     <td><a href="https://blog.seamonkey-project.org/">blog.seamonkey-project.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -3541,7 +3725,7 @@
             
                 
                 <tr>
-                    <td><a href="http://assets.mozilla.org/">assets.mozilla.org</a></td>
+                    <td><a href="https://assets.mozilla.org/">assets.mozilla.org</a></td>
                     <td class="text-center">
                         <span class="grade" data-content="Content Security Policy (CSP) header not implemented" data-pass="False" data-toggle="popover">
                         No
@@ -3568,18 +3752,87 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=assets.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="F" data-score="0" data-toggle="popover">
-                            F
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=assets.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="D" data-score="35" data-toggle="popover">
+                            D
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-pass="False">
-                            No
+                        <span class="grade" data-pass="True">
+                            Yes
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-compliance-level="No HTTPS" data-content="This site's TLS configuration is rated as: <strong>no https</strong>" data-pass="False" data-toggle="popover">
-                            No
+                        <span class="grade" data-compliance-level="Intermediate" data-content="This site's TLS configuration is rated as: <strong>intermediate</strong>" data-pass="True" data-toggle="popover">
+                            Yes
+                        </span>
+                    </td>
+                </tr>
+                
+            
+            </tbody>
+        </table>
+        
+    
+        
+
+
+        <table class="table table-striped table-condensed table-group">
+            <thead>
+                <tr>
+                    <th><h3>Communication Tools</h3></th>
+                    <th class="text-center">CSP</th>
+                    <th class="text-center">HSTS</th>
+                    <th class="text-center">SRI</th>
+                    <th class="text-center">XCTO</th>
+                    <th class="text-center">XFO</th>
+                    <th class="text-center">Grade</th>
+                    <th class="text-center">HTTPS</th>
+                    <th class="text-center">TLS<br>Compliant</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                
+                <tr>
+                    <td><a href="https://www.standu.ps/">www.standu.ps</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented with unsafe sources inside style-src. This includes &#39;unsafe-inline&#39;, data: or overly broad sources such as https:." data-pass="True" data-toggle="popover">
+                        Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="HTTP Strict Transport Security (HSTS) header set to less than six months (15768000)" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Subresource Integrity (SRI) not implemented, but all external scripts are loaded over https" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Frame-Options (XFO) implemented via the CSP frame-ancestors directive" data-pass="True" data-toggle="popover">
+                        Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=www.standu.ps'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="A" data-score="90" data-toggle="popover">
+                            A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="True">
+                            Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-compliance-level="Intermediate" data-content="This site's TLS configuration is rated as: <strong>intermediate</strong>" data-pass="True" data-toggle="popover">
+                            Yes
                         </span>
                     </td>
                 </tr>
@@ -3710,6 +3963,121 @@
         <table class="table table-striped table-condensed table-group">
             <thead>
                 <tr>
+                    <th><h3>Mailing Lists</h3></th>
+                    <th class="text-center">CSP</th>
+                    <th class="text-center">HSTS</th>
+                    <th class="text-center">SRI</th>
+                    <th class="text-center">XCTO</th>
+                    <th class="text-center">XFO</th>
+                    <th class="text-center">Grade</th>
+                    <th class="text-center">HTTPS</th>
+                    <th class="text-center">TLS<br>Compliant</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                
+                <tr>
+                    <td><a href="https://lists.mozilla.org/">lists.mozilla.org</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=lists.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="None" data-score="100" data-toggle="popover">
+                            N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="True">
+                            Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-compliance-level="Non-compliant" data-content="This site's TLS configuration is rated as: <strong>non-compliant</strong>" data-pass="False" data-toggle="popover">
+                            No
+                        </span>
+                    </td>
+                </tr>
+                
+            
+                
+                <tr>
+                    <td><a href="https://mail.mozilla.org/">mail.mozilla.org</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Site down" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=mail.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="None" data-score="100" data-toggle="popover">
+                            N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="True">
+                            Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-compliance-level="Non-compliant" data-content="This site's TLS configuration is rated as: <strong>non-compliant</strong>" data-pass="False" data-toggle="popover">
+                            No
+                        </span>
+                    </td>
+                </tr>
+                
+            
+            </tbody>
+        </table>
+        
+    
+        
+
+
+        <table class="table table-striped table-condensed table-group">
+            <thead>
+                <tr>
                     <th><h3>Miscellaneous</h3></th>
                     <th class="text-center">CSP</th>
                     <th class="text-center">HSTS</th>
@@ -3773,7 +4141,7 @@
                 <tr>
                     <td><a href="https://careers.mozilla.org/">careers.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -3911,7 +4279,7 @@
                 <tr>
                     <td><a href="https://mozillians.org/">mozillians.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented with &#39;unsafe-inline&#39; inside style-src" data-pass="True" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented with unsafe sources inside style-src. This includes &#39;unsafe-inline&#39;, data: or overly broad sources such as https:." data-pass="True" data-toggle="popover">
                         Yes
                         </span>
                     </td>
@@ -3938,6 +4306,52 @@
                     <td class="text-center">
                         <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=mozillians.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="A" data-score="95" data-toggle="popover">
                             A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="True">
+                            Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-compliance-level="Non-compliant" data-content="This site's TLS configuration is rated as: <strong>non-compliant</strong>" data-pass="False" data-toggle="popover">
+                            No
+                        </span>
+                    </td>
+                </tr>
+                
+            
+                
+                <tr>
+                    <td><a href="https://people.mozilla.org/">people.mozilla.org</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Content Security Policy (CSP) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="HTTP Strict Transport Security (HSTS) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Subresource Integrity (SRI) is not needed since site contains no script tags" data-pass="None" data-toggle="popover">
+                        N/A
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Frame-Options (XFO) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=people.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="F" data-score="0" data-toggle="popover">
+                            F
                         </span>
                     </td>
                     <td class="text-center">
@@ -4026,7 +4440,7 @@
                 <tr>
                     <td><a href="https://advocacy.mozilla.org/">advocacy.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -4072,7 +4486,7 @@
                 <tr>
                     <td><a href="https://codemoji.org/">codemoji.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -4210,7 +4624,7 @@
                 <tr>
                     <td><a href="https://learning.mozilla.org/">learning.mozilla.org</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -4325,7 +4739,7 @@
                 <tr>
                     <td><a href="https://mzl.la/">mzl.la</a></td>
                     <td class="text-center">
-                        <span class="grade" data-content="Content Security Policy (CSP) implemented, but allows &#39;unsafe-inline&#39; inside script-src" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-content="Content Security Policy (CSP) implemented unsafely. This includes &#39;unsafe-inline&#39; or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src." data-pass="False" data-toggle="popover">
                         No
                         </span>
                     </td>
@@ -4340,8 +4754,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
-                        No
+                        <span class="grade" data-content="X-Content-Type-Options header set to &#34;nosniff&#34;" data-pass="True" data-toggle="popover">
+                        Yes
                         </span>
                     </td>
                     <td class="text-center">
@@ -4350,8 +4764,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=mzl.la'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="C" data-score="55" data-toggle="popover">
-                            C
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=mzl.la'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="B" data-score="70" data-toggle="popover">
+                            B
                         </span>
                     </td>
                     <td class="text-center">
@@ -4491,8 +4905,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="HTTP Strict Transport Security (HSTS) header set to less than six months (15768000)" data-pass="False" data-toggle="popover">
-                        No
+                        <span class="grade" data-content="HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)" data-pass="True" data-toggle="popover">
+                        Yes
                         </span>
                     </td>
                     <td class="text-center">
@@ -4511,8 +4925,8 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=self-repair.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="C" data-score="60" data-toggle="popover">
-                            C
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=self-repair.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="B" data-score="70" data-toggle="popover">
+                            B
                         </span>
                     </td>
                     <td class="text-center">
@@ -4636,7 +5050,7 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-compliance-level="Old" data-content="This site's TLS configuration is rated as: <strong>old</strong>" data-pass="False" data-toggle="popover">
+                        <span class="grade" data-compliance-level="Non-compliant" data-content="This site's TLS configuration is rated as: <strong>non-compliant</strong>" data-pass="False" data-toggle="popover">
                             No
                         </span>
                     </td>
@@ -4753,6 +5167,52 @@
                     <td class="text-center">
                         <span class="grade" data-compliance-level="Non-compliant" data-content="This site's TLS configuration is rated as: <strong>non-compliant</strong>" data-pass="False" data-toggle="popover">
                             No
+                        </span>
+                    </td>
+                </tr>
+                
+            
+                
+                <tr>
+                    <td><a href="https://riskheatmap.security.mozilla.org/">riskheatmap.security.mozilla.org</a></td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Content Security Policy (CSP) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="HTTP Strict Transport Security (HSTS) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="Subresource Integrity (SRI) not implemented, but all external scripts are loaded over https" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Content-Type-Options header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="X-Frame-Options (XFO) header not implemented" data-pass="False" data-toggle="popover">
+                        No
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host=riskheatmap.security.mozilla.org'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="F" data-score="10" data-toggle="popover">
+                            F
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-pass="True">
+                            Yes
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-compliance-level="Intermediate" data-content="This site's TLS configuration is rated as: <strong>intermediate</strong>" data-pass="True" data-toggle="popover">
+                            Yes
                         </span>
                     </td>
                 </tr>
@@ -4924,7 +5384,7 @@
         
     
     </div>
-    <div id="dashboard-date" class="col-md-10 col-md-offset-1 text-center text-muted">Report generated: 2016-09-22</div>
+    <div id="dashboard-date" class="col-md-10 col-md-offset-1 text-center text-muted">Report generated: 2016-10-03</div>
 
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap-3.3.6.min.js"></script>
