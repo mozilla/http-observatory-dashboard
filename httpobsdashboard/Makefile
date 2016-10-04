@@ -15,6 +15,9 @@ deploy:
 
 generate: json-generate www-generate
 
+improvements:
+	PYTHONPATH='..' $(PY) scripts/improvements.py
+
 json-generate:
 	PYTHONPATH='..' $(PY) run.py json-generate
 
