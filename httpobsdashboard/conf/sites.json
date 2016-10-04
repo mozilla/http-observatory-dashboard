@@ -90,9 +90,11 @@
       "sso.mozilla.com"
     ],
     "Telemetry": [
-      "incoming.telemetry.mozilla.org",
-      "telemetry-experiment.cdn.mozilla.net",
+      "aggregates.telemetry.mozilla.org",
       "analysis.telemetry.mozilla.org",
+      "incoming.telemetry.mozilla.org",
+      "telemetry.mozilla.org",
+      "telemetry-experiment.cdn.mozilla.net",
       "sql.telemetry.mozilla.org",
       "metrics.services.mozilla.com"
     ],
@@ -143,7 +145,8 @@
       "codemoji.org",
       "fundraising.mozilla.org",
       "games.mozilla.org",
-      "learning.mozilla.org"
+      "learning.mozilla.org",
+      "petitions.mozilla.org"
     ],
     "Redirectors": [
       "click.e.mozilla.org",
@@ -163,10 +166,6 @@
       "arewefastyet.com",
       "riskheatmap.security.mozilla.org",
       "treestatus.mozilla.org"
-    ],
-    "Telemetry": [
-      "analysis.telemetry.mozilla.org",
-      "telemetry.mozilla.org"
     ],
     "Vidyo": [
       "v.mozilla.com",
