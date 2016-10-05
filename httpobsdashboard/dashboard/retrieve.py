@@ -46,6 +46,10 @@ def __get_http_observatory(host):
                         'score_description': 'Site down',
                         'score_modifier': 0
                     },
+                    'contribute': {
+                        'pass': False,
+                        'score_modifier': 0
+                    },
                     'strict-transport-security': {
                         'pass': None,
                         'score_description': 'Site down',

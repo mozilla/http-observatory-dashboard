@@ -38,7 +38,37 @@
             {% for site in sites[group] %}
                 {% for hostname, results in site.items() %}
                 <tr>
-                    <td><a href="{% if results.tlsobs.data.has_tls %}https{% else %}http{% endif %}://{{hostname}}/">{{ hostname }}</a></td>
+                    <td>
+                        <a href="{% if results.tlsobs.data.has_tls %}https{% else %}http{% endif %}://{{hostname}}/">{{ hostname }}</a>
+                        {% if results.httpobs.tests.contribute.pass and results.httpobs.tests.contribute.output.data %}
+                            <span class="glyphicon glyphicon-info-sign pull-right" data-container="body" data-toggle="popover" title="" data-content="
+                            <div>{{ results.httpobs.tests.contribute.output.data.description }}</div>
+
+                            <div><strong><u>Bugs</u></strong>
+                                <div>
+                                {% for key, value in results.httpobs.tests.contribute.output.data.bugs.iteritems()|sort %}
+                                    <a href='{{ value }}'>{{ key|capitalize }}</a>{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                                </div>
+                            </div>
+
+                            {% if 'irc' in results.httpobs.tests.contribute.output.data.participate %}
+                            <div>
+                                <div><strong><u>IRC</u></strong></div>
+                                <div>Channel: #{{ results.httpobs.tests.contribute.output.data.participate.irc.split('#')[-1] }}</div>{% endif %}
+                                {% if 'irc-contacts' in results.httpobs.tests.contribute.output.data.participate %}<div>Contacts: {{ results.httpobs.tests.contribute.output.data.participate['irc-contacts']|join(', ') }}</div>{% endif %}
+                            </div>
+
+                           <div><strong><u>URLs</u></strong>
+                               <div>
+                               {% for key, value in results.httpobs.tests.contribute.output.data.urls.iteritems()|sort %}
+                                   <a href='{{ value }}'>{{ key|capitalize }}</a>{% if not loop.last %}, {% endif %}
+                               {% endfor %}
+                               </div>
+                           </div>
+                                 " data-title="{{ results.httpobs.tests.contribute.output.data.name }}"></span>
+                        {% endif %}
+                    </td>
                     <td class="text-center">
                         <span class="grade" data-content="{{ results.httpobs.tests['content-security-policy'].score_description|escape }}" data-pass="{{ results.httpobs.tests['content-security-policy'].pass }}" data-toggle="popover">
                         {% if results.httpobs.tests['content-security-policy'].pass %}Yes{% elif results.httpobs.tests['content-security-policy'].pass == None %}N/A{% else %}No{% endif %}

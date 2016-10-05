@@ -9,6 +9,15 @@
     padding: .25em;
 }
 
+body > .popover {
+    max-width: 30em;
+    min-width: 18em;
+}
+
+body > .popover .popover-content > div:not(:last-child) {
+    padding-bottom: 1em;
+}
+
 span[data-pass="True"], span[data-grade="A+"], span[data-grade="A"], span[data-grade="A-"] {
     background: hsl(132, 75%, 31%);
     border-color: hsl(132, 75%, 24%);
@@ -37,7 +46,7 @@ span[data-pass="None"], span[data-grade="None"] {
 
 .table-group tr td:nth-child(1) {
     vertical-align: middle;
-    width: 18em;
+    width: 19.5em;
 }
 
 .table-group tr td:nth-child(8) {
