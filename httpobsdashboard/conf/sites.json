@@ -30,7 +30,8 @@
       "archive.mozilla.org",
       "download-installer.cdn.mozilla.net",
       "download.cdn.mozilla.net",
-      "download.mozilla.org"
+      "download.mozilla.org",
+      "ftp.mozilla.org"
     ],
     "Firefox Accounts": [
       "accounts.firefox.com",
@@ -135,7 +136,6 @@
       "air.mozilla.org",
       "careers.mozilla.org",
       "contributejson.org",
-      "ftp.mozilla.org",
       "mozillians.org",
       "people.mozilla.org",
       "publicsuffix.org"
