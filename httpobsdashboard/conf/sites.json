@@ -167,6 +167,9 @@
       "riskheatmap.security.mozilla.org",
       "treestatus.mozilla.org"
     ],
+    "Translation Services": [
+      "pontoon.mozilla.org"
+    ],
     "Vidyo": [
       "v.mozilla.com",
       "vreplay.mozilla.com"
