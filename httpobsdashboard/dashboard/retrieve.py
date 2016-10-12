@@ -143,10 +143,8 @@ def __poll(url, key, values=None, method='GET', headers=None, data=None, timeout
             # The TLS Observatory
             elif TLSOBS_API_URL in url:
                 return {
-                    'tlsobs': {
-                        'has_tls': None,
-                        'pass': None
-                    }
+                    'has_tls': None,
+                    'pass': None
                 }
 
             # Some unknown condition
