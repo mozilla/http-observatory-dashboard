@@ -41,8 +41,7 @@
       "verifier.accounts.firefox.com"
     ],
     "Firefox Hello": [
-      "hello.firefox.com",
-      "loop.services.mozilla.com"
+      "hello.firefox.com"
     ],
     "Firefox Sync": [
       "sync-264-us-west-2.sync.services.mozilla.com",
