@@ -129,7 +129,7 @@ def __poll(url, key, values=None, method='GET', headers=None, data=None, timeout
             r = s.get(url, timeout=timeout).json()
 
         # See if error is in there; if so, we just NA everything
-        if 'error' in r:
+        if 'error' in r or time.time() - start_time > timeout:
             print('\nUnable to get result from the HTTP Observatory @ {url}. Error: {error}.'.format(error=r['error'],
                                                                                                      url=url))
             # If things error out in the HTTP Observatory analyzer
@@ -159,9 +159,5 @@ def __poll(url, key, values=None, method='GET', headers=None, data=None, timeout
         else:
             if key in r:
                 return r
-
-        # Let's error out if it has taken too long
-        if time.time() - start_time > timeout:
-            raise requests.Timeout
 
         time.sleep(interval)
