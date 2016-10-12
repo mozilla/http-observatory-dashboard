@@ -130,10 +130,12 @@ def __poll(url, key, values=None, method='GET', headers=None, data=None, timeout
 
         # See if error is in there; if so, we just NA everything
         if 'error' in r or time.time() - start_time > timeout:
-            print('\nUnable to get result from the HTTP Observatory @ {url}. Error: {error}.'.format(error=r['error'],
-                                                                                                     url=url))
             # If things error out in the HTTP Observatory analyzer
             if HTTPOBS_API_URL + '/analyze' in url:
+                if 'error' in r:
+                    print(
+                        '\nUnable to get result from the HTTP Observatory @ {url}. '
+                        'Error: {error}.'.format(error=r['error'], url=url))
                 return {
                            'grade': None,
                            'state': 'FAILED'
