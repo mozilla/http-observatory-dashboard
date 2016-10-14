@@ -8,6 +8,7 @@
   "mozilla.org": ["Windows XP Support"],
   "oauth.accounts.firefox.com": ["API", "Cloud Services"],
   "profile.accounts.firefox.com": ["API", "Cloud Services"],
+  "publicsuffix.org": ["Static Community Site"],
   "push.services.mozilla.com": ["API", "Cloud Services"],
   "search.services.mozilla.com": ["API", "Cloud Services"],
   "shavar.services.mozilla.com": ["API", "Cloud Services"],

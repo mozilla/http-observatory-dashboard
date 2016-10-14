@@ -32,6 +32,27 @@
       }
     }
   },
+  "Static Community Site": {
+    "httpobs": {
+      "tests": {
+        "content-security-policy": {
+          "pass": null,
+          "score_description": "Static community sites don't need CSP.",
+          "score_modifier": 0
+        },
+        "x-frame-options": {
+          "pass": null,
+          "score_description": "Static community sites can be framed.",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "pass": null,
+          "score_description": "Static community sites don't need XXSSP.",
+          "score_modifier": 0
+        }
+      }
+    }
+  },
   "Windows XP Support": {
     "tlsobs": {
       "pass": true

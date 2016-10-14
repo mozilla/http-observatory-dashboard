@@ -155,6 +155,10 @@
       "qsurvey.mozilla.com",
       "self-repair.mozilla.org"
     ],
+    "Snippets": [
+      "snippets.mozilla.com",
+      "snippets.cdn.mozilla.net"
+    ],
     "Source Control": [
       "dxr.mozilla.org",
       "hg.mozilla.org",
