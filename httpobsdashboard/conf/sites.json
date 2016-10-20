@@ -162,6 +162,7 @@
     "Source Control": [
       "dxr.mozilla.org",
       "hg.mozilla.org",
+      "searchfox.org",
       "svn.mozilla.org"
     ],
     "Status Dashboards": [
