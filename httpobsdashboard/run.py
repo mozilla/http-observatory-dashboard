@@ -14,7 +14,7 @@ if __name__ == '__main__':
         print('Must run with either json-generate or www-generate')
         sys.exit()
 
-    today = datetime.datetime.now().strftime('%Y-%m-%d')
+    today = str(datetime.datetime.now()).split('.')[0]
     __dirname = os.path.abspath(os.path.dirname(__file__))
 
     if sys.argv[1] == 'json-generate':

@@ -52,3 +52,7 @@ span[data-pass="None"], span[data-grade="None"] {
 .table-group tr td:nth-child(8) {
      border-left: solid 2px #dddddd;
 }
+
+#dashboard-date {
+    margin-top: 3em;
+}

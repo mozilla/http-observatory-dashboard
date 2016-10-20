@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="css/httpobs-dashboard.css" type="text/css" />
 </head>
 <body>
+
     <div id="dashboard-results" class="col-md-10 col-md-offset-1">
+    <span id="dashboard-date" class="pull-right text-muted">Report generated: {{ DATE }}</span>
 
     {% for group in sites %}
         {% if sites[group]|length == 0 %}
@@ -117,7 +119,6 @@
         {% endif %}
     {% endfor %}
     </div>
-    <div id="dashboard-date" class="col-md-10 col-md-offset-1 text-center text-muted">Report generated: {{ DATE }}</div>
 
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap-3.3.6.min.js"></script>
