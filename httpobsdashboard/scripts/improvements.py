@@ -2,7 +2,7 @@ from httpobsdashboard.conf import sites
 import requests
 
 
-START_TIME = 1470632400    # August 8th
+START_TIME = 1470027600    # August 1st
 URL = 'https://http-observatory.security.mozilla.org/api/v1/getHostHistory?host='
 
 for group in sites:
@@ -16,7 +16,7 @@ for group in sites:
         if 'error' in r:
             continue
 
-        # Remove anything before August 8th
+        # Remove anything before August 1st
         recent = [entry for entry in r if entry.get('end_time_unix_timestamp', 0) > START_TIME]
 
         # If nothing has changed at all in ages, just return the very most recent score
@@ -29,4 +29,4 @@ for group in sites:
         # Print things out
         print('{0}: {1}'.format(host, ', '.join(grades)))
 
-    print
+    print()
