@@ -170,6 +170,9 @@
       "riskheatmap.security.mozilla.org",
       "treestatus.mozilla.org"
     ],
+    "Testing and Continuous Integration": [
+      "moztrap.mozilla.org"
+    ],
     "Translation Services": [
       "pontoon.mozilla.org"
     ],
