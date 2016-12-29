@@ -43,7 +43,7 @@ if __name__ == '__main__':
         # Write the results to disk
         __filenames = (
             os.path.join(__dirname, 'dist', 'data', 'results.json'),
-            os.path.join(__dirname, 'dist', 'data', '-'.join(['results', today]) + '.json')
+            # os.path.join(__dirname, 'dist', 'data', '-'.join(['results', today]) + '.json')
         )
 
         for __filename in __filenames:
