@@ -66,21 +66,6 @@
       "observatory.mozilla.org",
       "tls-observatory.services.mozilla.com"
     ],
-    "Persona": [
-      "browserid.org",
-      "www.browserid.org",
-      "firefoxos.persona.org",
-      "persona.org",
-      "www.persona.org",
-      "static.login.persona.org",
-      "verifier.login.persona.org",
-      "yahoo.login.persona.org",
-      "gmail.login.persona.org",
-      "login.anosrep.org",
-      "login.mozilla.org",
-      "login.persona.org",
-      "diresworb.org"
-    ],
     "Push": [
       "push.services.mozilla.com",
       "updates.push.services.mozilla.com"
