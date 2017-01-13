@@ -99,7 +99,8 @@
       "blog.getfirebug.com",
       "blog.mozilla.com",
       "blog.mozilla.org",
-      "blog.seamonkey-project.org"
+      "blog.seamonkey-project.org",
+      "planet.mozilla.org"
     ],
     "Branding & Marketing": [
       "assets.mozilla.org"
@@ -134,8 +135,7 @@
     ],
     "Redirectors": [
       "click.e.mozilla.org",
-      "mzl.la",
-      "outgoing.mozilla.org"
+      "mzl.la"
     ],
     "Shield": [
       "qsurvey.mozilla.com",
