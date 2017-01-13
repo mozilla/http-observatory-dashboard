@@ -1,4 +1,8 @@
+import time
+
+from httpobsdashboard.conf import TRACKING_AVERAGE_DURATION
 from httpobsdashboard.dashboard.deviate import deviate
+
 
 
 GRADE_CHART = {
@@ -50,12 +54,24 @@ def analyze(host, raw_output):
              'sri-not-implemented-but-no-scripts-loaded']:
         deviated_output['httpobs']['tests']['subresource-integrity']['pass'] = None
 
+    # Calculate the score delta
+    delta = 0
+    if deviated_output['httpobs']['scan']['history']:
+        now = int(time.time())
+        for entry in deviated_output['httpobs']['scan']['history']:
+            if now - entry.get('end_time_unix_timestamp', 0) < TRACKING_AVERAGE_DURATION:
+                delta = (
+                    deviated_output['httpobs']['scan']['history'][-1].get('score', 0) - entry.get('score', 0))
+                break
+
     # Rescore the site
     score = max(0, 100 + sum([test['score_modifier'] for test in deviated_output['httpobs']['tests'].values()]))
     grade = GRADE_CHART[min(100, score)] if deviated_output['httpobs']['scan']['grade'] else None
 
+    # Trim things up a bit so that the results are not HUGE
     return {
         'httpobs': {
+            'delta': delta,
             'grade': grade,
             'score': score,
             'tests': deviated_output['httpobs']['tests']

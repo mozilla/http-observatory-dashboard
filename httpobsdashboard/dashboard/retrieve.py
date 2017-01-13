@@ -76,9 +76,16 @@ def __get_http_observatory(host):
                         'score_modifier': 0
                     }
              }
+
+             # Blank out the history
+             r['scan']['history'] = []
         else:
             url = api_url + '/getScanResults?scan=' + str(r['scan']['scan_id'])
             r['tests'] = __poll(url, 'content-security-policy')
+
+            # Retrieve the history as well
+            url = api_url + '/getHostHistory?host=' + host
+            r['scan']['history'] = requests.get(url).json()
 
     except requests.exceptions.RequestException:
         pass

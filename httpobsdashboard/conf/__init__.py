@@ -5,6 +5,8 @@ import os.path
 
 __dirname = os.path.abspath(os.path.dirname(__file__))
 
+# Tracking average duration, currently 90 days in seconds
+TRACKING_AVERAGE_DURATION = 7776000
 
 # Open the JSON configuration files
 with open(os.path.join(__dirname, 'site-deviations.json'), 'r') as __deviations_f:
