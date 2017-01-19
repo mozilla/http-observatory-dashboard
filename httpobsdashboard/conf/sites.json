@@ -103,7 +103,8 @@
       "planet.mozilla.org"
     ],
     "Branding & Marketing": [
-      "assets.mozilla.org"
+      "assets.mozilla.org",
+      "events.mozilla.org"
     ],
     "Communication Tools": [
       "www.standu.ps"
@@ -130,6 +131,7 @@
       "codemoji.org",
       "fundraising.mozilla.org",
       "games.mozilla.org",
+      "internethealthreport.org",
       "learning.mozilla.org",
       "petitions.mozilla.org"
     ],
