@@ -33,6 +33,7 @@
                     <th class="text-center">XFO</th>
                     <th class="text-center">Grade</th>
                     <th class="text-center">90 day &Delta;</th>
+                    <th class="text-center">Overall &Delta;</th>
                     <th class="text-center">HTTPS</th>
                     <th class="text-center">TLS<br>Compliant</th>
                 </tr>
@@ -100,6 +101,11 @@
                     <td class="text-center">
                         <span class="grade" data-content="You can see this site's <a href='https://observatory.mozilla.org/analyze.html?host={{ hostname }}'>full scorecard</a> on the Observatory." data-delay='{ "hide": 1000 }' data-grade="{{ results.httpobs.grade }}" data-score="{{ results.httpobs.score }}" data-toggle="popover">
                             {% if results.httpobs.grade %}{{ results['httpobs']['grade'] }}{% else %}N/A{% endif %}
+                        </span>
+                    </td>
+                    <td class="text-center">
+                        <span class="grade" data-content="{{ results.httpobs.delta90 }}" data-pass="{% if results.httpobs.delta90 > 0 %}True{% elif results.httpobs.delta90 == 0 %}None{% else %}False{% endif %}" data-toggle="popover">
+                        {{ results['httpobs']['delta90'] }}
                         </span>
                     </td>
                     <td class="text-center">

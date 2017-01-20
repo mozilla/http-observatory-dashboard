@@ -55,14 +55,18 @@ def analyze(host, raw_output):
         deviated_output['httpobs']['tests']['subresource-integrity']['pass'] = None
 
     # Calculate the score delta
-    delta = 0
+    delta90 = delta = 0
     if deviated_output['httpobs']['scan']['history']:
         now = int(time.time())
         for entry in deviated_output['httpobs']['scan']['history']:
             if now - entry.get('end_time_unix_timestamp', 0) < TRACKING_AVERAGE_DURATION:
-                delta = (
+                delta90 = (
                     deviated_output['httpobs']['scan']['history'][-1].get('score', 0) - entry.get('score', 0))
                 break
+
+        delta = (deviated_output['httpobs']['scan']['history'][-1].get('score', 0) -
+                 deviated_output['httpobs']['scan']['history'][0].get('score', 0))
+
 
     # Rescore the site
     score = max(0, 100 + sum([test['score_modifier'] for test in deviated_output['httpobs']['tests'].values()]))
@@ -72,6 +76,7 @@ def analyze(host, raw_output):
     return {
         'httpobs': {
             'delta': delta,
+            'delta90': delta90,
             'grade': grade,
             'score': score,
             'tests': deviated_output['httpobs']['tests']
