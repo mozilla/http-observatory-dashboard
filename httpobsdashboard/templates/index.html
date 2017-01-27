@@ -43,7 +43,7 @@
                 {% for hostname, results in site.items() %}
                 <tr>
                     <td>
-                        <a href="{% if results.tlsobs.data.has_tls %}https{% else %}http{% endif %}://{{hostname}}/">{{ hostname }}</a>
+                        <a href="{% if results.tlsobs.data.has_tls %}https{% else %}http{% endif %}://{{hostname}}/" target="_blank" rel="noopener noreferrer">{{ hostname }}</a>
                         {% if results.httpobs.tests.contribute.pass and results.httpobs.tests.contribute.output.data %}
                             <span class="glyphicon glyphicon-info-sign pull-right" data-container="body" data-toggle="popover" title="" data-content="
                             <div>{{ results.httpobs.tests.contribute.output.data.description }}</div>
