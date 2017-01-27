@@ -10,6 +10,8 @@
       "addons.cdn.mozilla.net",
       "blocklist.addons.mozilla.org",
       "builder.addons.mozilla.org",
+      "compatibility-lookup.services.mozilla.com",
+      "discovery.addons.mozilla.org",
       "services.addons.mozilla.org",
       "static.addons.mozilla.net",
       "versioncheck-bg.addons.mozilla.org",
@@ -26,6 +28,11 @@
       "bugzilla.mozilla.org",
       "bugzilla-dev.allizom.org"
     ],
+    "Crash Reports": [
+      "crash-reports-xpsp2.mozilla.com",
+      "crash-reports.mozilla.com",
+      "crash-stats.mozilla.com"
+    ],
     "Downloads (Product Delivery)": [
       "archive.mozilla.org",
       "download-installer.cdn.mozilla.net",
@@ -36,12 +43,18 @@
     "Firefox Accounts": [
       "accounts.firefox.com",
       "api.accounts.firefox.com",
+      "firefoxusercontent.com",
+      "mozillausercontent.com",
       "oauth.accounts.firefox.com",
       "profile.accounts.firefox.com",
       "verifier.accounts.firefox.com"
     ],
     "Firefox Hello": [
       "hello.firefox.com"
+    ],
+    "Firefox Settings": [
+      "firefox.settings.services.mozilla.com",
+      "webextensions.settings.services.mozilla.com"
     ],
     "Firefox Sync": [
       "sync-264-us-west-2.sync.services.mozilla.com",
@@ -57,9 +70,11 @@
       "location-leaderboard.services.mozilla.com"
     ],
     "Marketplace": [
+      "casttv.services.mozilla.com",
       "marketplace.firefox.com",
       "receiptcheck.marketplace.firefox.com",
-      "static.marketplace.firefox.com"
+      "static.marketplace.firefox.com",
+      "syncto.services.mozilla.com"
     ],
     "Observatory": [
       "http-observatory.security.mozilla.org",
@@ -75,11 +90,16 @@
     ],
     "Telemetry": [
       "aggregates.telemetry.mozilla.org",
+      "analysis-output.telemetry.mozilla.org",
       "analysis.telemetry.mozilla.org",
+      "gauss.telemetry.mozilla.org",
       "incoming.telemetry.mozilla.org",
+      "metrics.services.mozilla.com",
+      "pipeline-cep.prod.mozaws.net",
+      "reports.telemetry.mozilla.org",
+      "start.telemetry.mozilla.org",
       "telemetry.mozilla.org",
       "telemetry-experiment.cdn.mozilla.net",
-      "sql.telemetry.mozilla.org",
       "metrics.services.mozilla.com"
     ],
     "Test Pilot": [
@@ -124,7 +144,8 @@
       "login.mozilla.com",
       "mozillians.org",
       "people.mozilla.org",
-      "publicsuffix.org"
+      "publicsuffix.org",
+      "restmail.net"
     ],
     "Public Relations & PR Campaigns": [
       "advocacy.mozilla.org",

@@ -1,10 +1,12 @@
 {
+  "analysis-output.telemetry.mozilla.org": ["API", "Cloud Services"],
   "api.accounts.firefox.com": ["API", "Cloud Services"],
   "archive.mozilla.org": ["Windows XP Support"],
   "loop.services.mozilla.com": ["API", "Cloud Services"],
   "download-installer.cdn.mozilla.net": ["Windows XP Support"],
   "download.cdn.mozilla.net": ["Windows XP Support"],
   "download.mozilla.org": ["Windows XP Support"],
+  "firefox.settings.services.mozilla.com": ["API", "Cloud Services"],
   "mozilla.org": ["Windows XP Support"],
   "oauth.accounts.firefox.com": ["API", "Cloud Services"],
   "profile.accounts.firefox.com": ["API", "Cloud Services"],
@@ -18,5 +20,6 @@
   "token.services.mozilla.com": ["API", "Cloud Services"],
   "tracking.services.mozilla.com": ["API", "Cloud Services"],
   "updates.push.services.mozilla.com": ["API", "Cloud Services"],
-  "verifier.accounts.firefox.com": ["API", "Cloud Services"]
+  "verifier.accounts.firefox.com": ["API", "Cloud Services"],
+  "webextensions.settings.services.mozilla.com": ["API", "Cloud Services"]
 }
