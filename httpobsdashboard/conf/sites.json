@@ -12,6 +12,7 @@
       "builder.addons.mozilla.org",
       "compatibility-lookup.services.mozilla.com",
       "discovery.addons.mozilla.org",
+      "firefoxusercontent.com",
       "services.addons.mozilla.org",
       "static.addons.mozilla.net",
       "versioncheck-bg.addons.mozilla.org",
@@ -142,6 +143,7 @@
       "careers.mozilla.org",
       "contributejson.org",
       "login.mozilla.com",
+      "mozillausercontent.com",
       "mozillians.org",
       "people.mozilla.org",
       "publicsuffix.org",
@@ -173,6 +175,9 @@
       "hg.mozilla.org",
       "searchfox.org",
       "svn.mozilla.org"
+    ],
+    "Staging Instances": [
+      "mozillausercontent.com"
     ],
     "Status Dashboards": [
       "arewefastyet.com",
