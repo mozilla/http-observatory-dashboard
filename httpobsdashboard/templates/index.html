@@ -36,6 +36,7 @@
                     <th class="text-center">Overall &Delta;</th>
                     <th class="text-center">HTTPS</th>
                     <th class="text-center">TLS<br>Compliant</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -122,6 +123,9 @@
                         <span class="grade" data-compliance-level="{{ results.tlsobs.grade }}" data-content="This site's TLS configuration is rated as: <strong>{{ results.tlsobs.grade|lower }}</strong>" data-pass="{{ results.tlsobs.pass }}" data-toggle="popover">
                             {% if results.tlsobs.pass %}Yes{% else %}No{% endif %}
                         </span>
+                    </td>
+                    <td>
+                        <a href="https://observatory.mozilla.org/analyze.html?host={{hostname}}" title="Scan on the Observatory" target="_blank" rel="noopener noreferrer" class="glyphicon glyphicon-list-alt pull-right text-muted"></a>
                     </td>
                 </tr>
                 {% endfor %}
