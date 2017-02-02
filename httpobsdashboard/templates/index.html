@@ -13,7 +13,10 @@
 <body>
 
     <div id="dashboard-results" class="col-md-10 col-md-offset-1">
-    <span id="dashboard-date" class="pull-right text-muted">Report generated: {{ DATE }}</span>
+    <span class="pull-right">
+      <input type="search" placeholder="Filter by site name" value="" id="filter-sites" autofocus /><br />
+      <span id="dashboard-date" class="text-muted">Report generated: {{ DATE }}</span>
+    </span>
 
     {% for group in sites %}
         {% if sites[group]|length == 0 %}
