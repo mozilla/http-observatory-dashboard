@@ -111,17 +111,17 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="{{ results.httpobs.delta90 }}" data-pass="{% if results.httpobs.delta90 > 0 %}True{% elif results.httpobs.delta90 == 0 %}None{% else %}False{% endif %}" data-toggle="popover">
+                        <span class="grade" data-content="Over the past 90 days there has been a score change of: <strong>{{ results.httpobs.delta90 }}/100</strong>" data-pass="{% if results.httpobs.delta90 > 0 %}True{% elif results.httpobs.delta90 == 0 %}None{% else %}False{% endif %}" data-toggle="popover">
                         {{ results['httpobs']['delta90'] }}
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="{{ results.httpobs.delta }}" data-pass="{% if results.httpobs.delta > 0 %}True{% elif results.httpobs.delta == 0 %}None{% else %}False{% endif %}" data-toggle="popover">
+                        <span class="grade" data-content="Since records began there has been a score change of: <strong>{{ results.httpobs.delta }}/100</strong>" data-pass="{% if results.httpobs.delta > 0 %}True{% elif results.httpobs.delta == 0 %}None{% else %}False{% endif %}" data-toggle="popover">
                         {{ results['httpobs']['delta'] }}
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-pass="{{ results.tlsobs.data.has_tls }}">
+                        <span class="grade" data-content="{% if results.tlsobs.data.has_tls %}Site has HTTPS support{% else %}Site doesn't support HTTPS!{% endif %}" data-pass="{{ results.tlsobs.data.has_tls }}" data-toggle="popover">
                             {% if results.tlsobs.data.has_tls %}Yes{% else %}No{% endif %}
                         </span>
                     </td>
