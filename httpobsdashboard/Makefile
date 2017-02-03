@@ -1,4 +1,9 @@
-PY?=python
+PY3 := $(shell command -v python3 2> /dev/null)
+ifdef PY3
+  PY?=python3
+else
+  PY?=python
+endif
 
 help:
 	@echo 'Makefile to create the HTTP Observatory website'
