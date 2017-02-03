@@ -26,6 +26,8 @@
             <thead>
                 <tr>
                     <th><h3>{{ group }}</h3></th>
+                    <th></th>
+                    <th></th>
                     <th class="text-center">CSP</th>
                     <th class="text-center">HSTS</th>
                     <th class="text-center">SRI</th>
@@ -36,7 +38,6 @@
                     <th class="text-center">Overall &Delta;</th>
                     <th class="text-center">HTTPS</th>
                     <th class="text-center">TLS<br>Compliant</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -45,6 +46,8 @@
                 <tr>
                     <td>
                         <a href="{% if results.tlsobs.data.has_tls %}https{% else %}http{% endif %}://{{hostname}}/" target="_blank" rel="noopener noreferrer">{{ hostname }}</a>
+                    </td>
+                    <td>
                         {% if results.httpobs.tests.contribute.pass and results.httpobs.tests.contribute.output.data %}
                             <span class="glyphicon glyphicon-info-sign pull-right" data-container="body" data-toggle="popover" title="" data-content="
                             <div>{{ results.httpobs.tests.contribute.output.data.description }}</div>
@@ -73,6 +76,9 @@
                            </div>
                                  " data-title="{{ results.httpobs.tests.contribute.output.data.name }}"></span>
                         {% endif %}
+                    </td>
+                    <td>
+                        <a href="https://observatory.mozilla.org/analyze.html?host={{hostname}}" data-content="Scan <strong>{{hostname}}</strong> on the Observatory" data-toggle="popover" target="_blank" rel="noopener noreferrer" class="glyphicon glyphicon-list-alt pull-right text-muted"></a>
                     </td>
                     <td class="text-center">
                         <span class="grade" data-content="{{ results.httpobs.tests['content-security-policy'].score_description|escape }}" data-pass="{{ results.httpobs.tests['content-security-policy'].pass }}" data-toggle="popover">
@@ -123,9 +129,6 @@
                         <span class="grade" data-compliance-level="{{ results.tlsobs.grade }}" data-content="This site's TLS configuration is rated as: <strong>{{ results.tlsobs.grade|lower }}</strong>" data-pass="{{ results.tlsobs.pass }}" data-toggle="popover">
                             {% if results.tlsobs.pass %}Yes{% else %}No{% endif %}
                         </span>
-                    </td>
-                    <td>
-                        <a href="https://observatory.mozilla.org/analyze.html?host={{hostname}}" title="Scan on the Observatory" target="_blank" rel="noopener noreferrer" class="glyphicon glyphicon-list-alt pull-right text-muted"></a>
                     </td>
                 </tr>
                 {% endfor %}
