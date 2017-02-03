@@ -49,6 +49,15 @@ span[data-pass="None"], span[data-grade="None"] {
     width: 19.5em;
 }
 
+.table-group tr td:nth-child(2):hover {
+    cursor: pointer;
+}
+
+.table-group tr td:nth-child(2), .table-group tr td:nth-child(3) {
+    vertical-align: middle;
+    width: 1em;
+}
+
 .table-group tr td:nth-child(10) {
      border-left: solid 2px #dddddd;
 }
