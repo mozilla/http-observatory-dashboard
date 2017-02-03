@@ -111,12 +111,12 @@
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="{{ results.httpobs.delta90 }}" data-pass="{% if results.httpobs.delta90 > 0 %}True{% elif results.httpobs.delta90 == 0 %}None{% else %}False{% endif %}" data-toggle="popover">
+                        <span class="grade" data-content="In the last 90 days, this site's score has improved <strong>{{ results.httpobs.delta90 }}</strong> points" data-pass="{% if results.httpobs.delta90 > 0 %}True{% elif results.httpobs.delta90 == 0 %}None{% else %}False{% endif %}" data-toggle="popover">
                         {{ results['httpobs']['delta90'] }}
                         </span>
                     </td>
                     <td class="text-center">
-                        <span class="grade" data-content="{{ results.httpobs.delta }}" data-pass="{% if results.httpobs.delta > 0 %}True{% elif results.httpobs.delta == 0 %}None{% else %}False{% endif %}" data-toggle="popover">
+                        <span class="grade" data-content="Since first being scanned, this site's score has improved <strong>{{ results.httpobs.delta }}</strong> points" data-pass="{% if results.httpobs.delta > 0 %}True{% elif results.httpobs.delta == 0 %}None{% else %}False{% endif %}" data-toggle="popover">
                         {{ results['httpobs']['delta'] }}
                         </span>
                     </td>
