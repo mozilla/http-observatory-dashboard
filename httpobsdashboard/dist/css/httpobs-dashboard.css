@@ -63,5 +63,10 @@ span[data-pass="None"], span[data-grade="None"] {
 }
 
 #dashboard-date {
-    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+#filter-sites {
+    margin-top: 1.5em;
+    width: 20em;
 }
