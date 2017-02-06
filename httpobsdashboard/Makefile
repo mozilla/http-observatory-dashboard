@@ -1,4 +1,4 @@
-PY?=python
+PY?=python3
 
 help:
 	@echo 'Makefile to create the HTTP Observatory website'
