@@ -74,12 +74,12 @@ def analyze(host, raw_output):
 
     # Remove unneeded content from the JSON output
     for k, v in deviated_output['httpobs']['tests'].items():
-        if k not in ['contribute']:
+        if k not in ['contribute'] and 'output' in v:
             del(v['output'])
-        del(v['expectation'])
-        del(v['name'])
-        del(v['result'])
-        del(v['score_modifier'])
+
+        for key in ['expectation', 'name', 'result', 'score_modifier']:
+            if key in v:
+                del(v[key])
 
     # Trim things up a bit so that the results are not HUGE
     return {
