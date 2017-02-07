@@ -50,7 +50,7 @@
                     {% for hostname, results in site.items() %}
                     <tr>
                         <td>
-                            <a href="{% if results.tlsobs.data.has_tls %}https{% else %}http{% endif %}://{{hostname}}/" target="_blank" rel="noopener noreferrer">{{ hostname }}</a>
+                            <a href="{% if results.tlsobs.tls %}https{% else %}http{% endif %}://{{hostname}}/" target="_blank" rel="noopener noreferrer">{{ hostname }}</a>
                         </td>
                         <td>
                             {% if results.httpobs.tests.contribute.pass and results.httpobs.tests.contribute.output.data %}
@@ -59,7 +59,7 @@
 
                                 <div><strong><u>Bugs</u></strong>
                                     <div>
-                                    {% for key, value in results.httpobs.tests.contribute.output.data.bugs.iteritems()|sort %}
+                                    {% for key, value in results.httpobs.tests.contribute.output.data.bugs.items()|sort %}
                                         <a href='{{ value }}'>{{ key|capitalize }}</a>{% if not loop.last %}, {% endif %}
                                     {% endfor %}
                                     </div>
@@ -74,7 +74,7 @@
 
                                <div><strong><u>URLs</u></strong>
                                    <div>
-                                   {% for key, value in results.httpobs.tests.contribute.output.data.urls.iteritems()|sort %}
+                                   {% for key, value in results.httpobs.tests.contribute.output.data.urls.items()|sort %}
                                        <a href='{{ value }}'>{{ key|capitalize }}</a>{% if not loop.last %}, {% endif %}
                                    {% endfor %}
                                    </div>
@@ -126,8 +126,8 @@
                             </span>
                         </td>
                         <td class="text-center">
-                            <span class="grade" data-pass="{{ results.tlsobs.data.has_tls }}">
-                                {% if results.tlsobs.data.has_tls %}Yes{% else %}No{% endif %}
+                            <span class="grade" data-pass="{{ results.tlsobs.tls }}">
+                                {% if results.tlsobs.tls %}Yes{% else %}No{% endif %}
                             </span>
                         </td>
                         <td class="text-center">
