@@ -58,7 +58,7 @@ span[data-pass="None"], span[data-grade="None"] {
     width: 1em;
 }
 
-.table-group tr td:nth-child(10) {
+.table-group tr td:nth-child(12) {
      border-left: solid 2px #dddddd;
 }
 

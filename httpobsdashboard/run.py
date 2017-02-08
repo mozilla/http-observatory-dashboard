@@ -40,6 +40,8 @@ if __name__ == '__main__':
                     host: analysis
                 }
 
+        # Once this is done, we need to calculate statistics
+
         # Write the results to disk
         __filenames = (
             os.path.join(__dirname, 'dist', 'data', 'results.json'),
@@ -56,9 +58,8 @@ if __name__ == '__main__':
 
         # Information to pass into the rendererererer
         config = {
-            'AUTHOR': 'April King',
             'DATE': today,
-            'SITENAME': 'Mozilla Observatory Dashboard',
+            'config': httpobsdashboard.conf.config,
             'sites': sites
         }
 

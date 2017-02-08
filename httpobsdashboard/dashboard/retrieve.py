@@ -4,15 +4,19 @@ import requests
 import sys
 import time
 
+from httpobsdashboard.conf import tlsObs
 
 HTTPOBS_API_URL = os.environ.get('HTTPOBS_API_URL') or 'https://http-observatory.security.mozilla.org/api/v1'
 TLSOBS_API_URL = 'https://tls-observatory.services.mozilla.com/api/v1'
 
+# Create a requests session to continue to reuse
+__s = requests.Session()
 
 def mass_scan_priming(hosts):
-    # Initiate the TLS Observatory scans
-    rs = (grequests.post(TLSOBS_API_URL + '/scan', data={'rescan': 'false', 'target': host}) for host in hosts)
-    grequests.map(rs)
+    if tlsObs:
+        # Initiate the TLS Observatory scans
+        rs = (grequests.post(TLSOBS_API_URL + '/scan', data={'rescan': 'false', 'target': host}) for host in hosts)
+        grequests.map(rs)
 
     # Initiate the HTTP Observatory scans
     urls = [HTTPOBS_API_URL + '/analyze?host=' + host for host in hosts]
@@ -94,6 +98,10 @@ def __get_http_observatory(host):
 
 
 def __get_tls_observatory(host):
+    # If we've disabled the TLS tests, let's just return nothing
+    if not tlsObs:
+        return None
+
     # First get the scan ID
     url = TLSOBS_API_URL + '/scan'
 
@@ -121,9 +129,7 @@ def __poll(url, key, values=None, method='GET', headers=None, data=None, timeout
     if data is None:
         data = {}
 
-    # Create requests session
-    s = requests.Session()
-    s.headers.update(headers)
+    __s.headers.update(headers)
 
     # Set the start time, since we don't want to go longer than timeout seconds
     start_time = time.time()
@@ -131,9 +137,9 @@ def __poll(url, key, values=None, method='GET', headers=None, data=None, timeout
     while True:
         # Retrieve the URL
         if method == 'POST':
-            r = s.post(url, data=data, timeout=timeout).json()
+            r = __s.post(url, data=data, timeout=timeout).json()
         else:
-            r = s.get(url, timeout=timeout).json()
+            r = __s.get(url, timeout=timeout).json()
 
         # See if error is in there; if so, we just NA everything
         if 'error' in r or time.time() - start_time > timeout:
