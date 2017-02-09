@@ -24,21 +24,26 @@ if __name__ == '__main__':
         # First prime all the sites (to speed up scans)
         all_hosts = []
         for group in sites:
-            for host in sites[group]:
-                all_hosts.append(host)
+            for subGroup in sites[group]:
+                for host in sites[group][subGroup]:
+                    all_hosts.append(host)
         httpobsdashboard.dashboard.mass_scan_priming(all_hosts)
 
         # Then go retrieve the results
         for group in sites:
-            for host in sites[group]:
-                # Now retrieve all the results
-                response = httpobsdashboard.dashboard.retrieve(host)
-                analysis = httpobsdashboard.dashboard.analyze(host, response)
+            if httpobsdashboard.conf.debug:
+                print('Scanning group: {groupName}'.format(groupName=group))
 
-                # Store the results
-                sites[group][sites[group].index(host)] = {
-                    host: analysis
-                }
+            for subGroup in sites[group]:
+                for host in sites[group][subGroup]:
+                    # Now retrieve all the results
+                    response = httpobsdashboard.dashboard.retrieve(host)
+                    analysis = httpobsdashboard.dashboard.analyze(host, response)
+
+                    # Store the results
+                    sites[group][subGroup][sites[group][subGroup].index(host)] = {
+                        host: analysis
+                    }
 
         # Once this is done, we need to calculate statistics
 
