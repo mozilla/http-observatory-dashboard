@@ -24,19 +24,22 @@ if __name__ == '__main__':
         # First prime all the sites (to speed up scans)
         all_hosts = []
         for group in sites:
-            for host in sites[group]:
+          for subGroup in sites[group]:
+            for host in sites[group][subGroup]:
                 all_hosts.append(host)
         httpobsdashboard.dashboard.mass_scan_priming(all_hosts)
 
         # Then go retrieve the results
         for group in sites:
-            for host in sites[group]:
+          print('Scanning group: {groupName}'.format(groupName = group))
+          for subGroup in sites[group]:
+            for host in sites[group][subGroup]:
                 # Now retrieve all the results
                 response = httpobsdashboard.dashboard.retrieve(host)
                 analysis = httpobsdashboard.dashboard.analyze(host, response)
 
                 # Store the results
-                sites[group][sites[group].index(host)] = {
+                sites[group][subGroup][sites[group][subGroup].index(host)] = {
                     host: analysis
                 }
 

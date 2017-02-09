@@ -4,7 +4,7 @@ import requests
 import sys
 import time
 
-from httpobsdashboard.conf import tlsObs
+from httpobsdashboard.conf import tlsObs, maxQueue
 
 HTTPOBS_API_URL = os.environ.get('HTTPOBS_API_URL') or 'https://http-observatory.security.mozilla.org/api/v1'
 TLSOBS_API_URL = 'https://tls-observatory.services.mozilla.com/api/v1'
@@ -13,15 +13,59 @@ TLSOBS_API_URL = 'https://tls-observatory.services.mozilla.com/api/v1'
 __s = requests.Session()
 
 def mass_scan_priming(hosts):
-    if tlsObs:
-        # Initiate the TLS Observatory scans
-        rs = (grequests.post(TLSOBS_API_URL + '/scan', data={'rescan': 'false', 'target': host}) for host in hosts)
-        grequests.map(rs)
+    start_time = time.time()
+    total_scanned=0
 
-    # Initiate the HTTP Observatory scans
-    urls = [HTTPOBS_API_URL + '/analyze?host=' + host for host in hosts]
-    rs = (grequests.post(url, data={'rescan': 'false'}) for url in urls)
-    grequests.map(rs)
+    s = requests.Session()
+
+    while True:
+        loop_time = time.time()
+
+        # Get the queue availability
+        try:
+            r = s.get(HTTPOBS_API_URL + '/getScannerStates').json()
+        except:
+            time.sleep(5)
+            continue
+
+        available = maxQueue - r.get('PENDING', 0) - r.get('RUNNING', 0) - r.get('STARTING', 0)
+
+        print('Queue availability: {queue_avail}. Total scanned: {total_scanned}. Pending: {pending}. Queue remaining: {queueRemaining}'.format(queue_avail=available, total_scanned=total_scanned, pending=r.get('PENDING', 0), queueRemaining=len(hosts)))
+
+        if not hosts and r.get('PENDING', 0) == 0:
+            break
+
+        if available > 0:
+            targets = hosts[:available]
+            total_scanned += available
+
+            # Initiate the TLS Observatory scans
+            if tlsObs:
+                try:
+                    rs = (grequests.post(TLSOBS_API_URL + '/scan', data={'rescan': 'false', 'target': host}) for host in targets)
+                    grequests.map(rs)
+                except:
+                    time.sleep(5)
+                    raise
+
+            # Initiate the HTTP Observatory scans
+            try:
+                urls = [HTTPOBS_API_URL + '/analyze?host=' + host for host in targets]
+                rs = (grequests.post(url, data={'rescan': 'false'}) for url in urls)
+                grequests.map(rs)
+            except:
+                time.sleep(5)
+                raise
+
+            hosts = hosts[available:]
+
+        if time.time() - loop_time < 5:
+            time.sleep(5)
+
+
+    total_time = int(time.time() - start_time)
+    print('Elapsed time: {elapsed_time}s'.format(elapsed_time=total_time))
+    print('Scans/sec: {speed}'.format(speed=total_scanned / total_time))
 
 
 def retrieve(host):

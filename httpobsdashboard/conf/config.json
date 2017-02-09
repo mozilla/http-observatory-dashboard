@@ -2,5 +2,6 @@
   "author": "April King",
   "siteName": "Mozilla Observatory Dashboard",
   "tlsObs": true,
-  "trackingDeltaDays": 90
+  "trackingDeltaDays": 90,
+  "maxQueue": 128
 }
