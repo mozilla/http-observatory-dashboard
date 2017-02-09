@@ -4,7 +4,6 @@ from httpobsdashboard.conf import tlsObs, trackingDeltaDays
 from httpobsdashboard.dashboard.deviate import deviate
 
 
-
 GRADE_CHART = {
     100: 'A+',
     95: 'A',
@@ -70,7 +69,9 @@ def analyze(host, raw_output):
                                                                                         'intermediate'] else False
 
         # Clean up some output
-        deviated_output['tlsobs']['level'] = result.get('level', '').capitalize().replace('Non compliant', 'Non-compliant')
+        deviated_output['tlsobs']['level'] = result.get('level', '') \
+            .capitalize() \
+            .replace('Non compliant', 'Non-compliant')
         if not deviated_output['tlsobs']['has_tls']:
             deviated_output['tlsobs']['level'] = 'No HTTPS'
     else:

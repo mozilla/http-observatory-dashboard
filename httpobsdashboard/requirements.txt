@@ -1,3 +1,4 @@
+flake8
 grequests
 jinja2
 livereload
