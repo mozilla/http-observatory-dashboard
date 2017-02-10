@@ -1,0 +1,27 @@
+<div class="col-xs-12 col-md-10 col-md-offset-1">
+    <hr>
+</div>
+
+<div id="dashboard-stats" class="col-xs-12 col-md-6 col-md-offset-1">
+    <h2>{{ config.statsForManagersName }}</h2>
+    <table class="table table-striped table-condensed">
+        <thead>
+            <tr>
+                <th class="text-center"></th>
+                <th class="text-center">Sites at {{ config.statsForManagersMinGrade }} or better</th>
+                <th class="text-center">Total Sites</th>
+                <th class="text-center">Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for group in stats %}
+            <tr>
+                <td><strong>{{ group }}</strong></td>
+                <td class="text-center">{{ stats[group]['passing'] }}</td>
+                <td class="text-center">{{ stats[group]['quantity'] }}</td>
+                <td class="text-center">{{ stats[group]['percentage'] }}%</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

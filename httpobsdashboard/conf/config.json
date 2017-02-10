@@ -3,6 +3,10 @@
   "debug": true,
   "maxQueue": 64,
   "siteName": "Mozilla Observatory Dashboard",
-  "tlsObs": false,
+  "statsForManagers": true,
+  "statsForManagersMinGrade": "B",
+  "statsForManagersMinScore": 65,
+  "statsForManagersName": "Stats for Managers",
+  "tlsObs": true,
   "trackingDeltaDays": 90
 }

@@ -2,4 +2,5 @@ flake8
 grequests
 jinja2
 livereload
+nested_dict
 requests

@@ -15,11 +15,13 @@
       <span class="pull-right text-muted">Report generated: {{ DATE }}</span><br>
     </div>
 
-    <div id="dashboard-results" class="col-xs-12 col-md-10 col-md-offset-1">
+    <div id="dashboard-search" class="col-xs-12 col-md-10 col-md-offset-1">
         <span class="pull-right">
           <input type="search" placeholder="Filter by site name" value="" id="filter-sites" autofocus />
         </span>
+    </div>
 
+    <div id="dashboard-results" class="col-xs-12 col-md-10 col-md-offset-1">
         {% for group in sites %}
             <h2>{{ group }}</h2>
             {% if sites[group]|length == 0 %}
@@ -31,6 +33,11 @@
             {% endif %}
         {% endfor %}
     </div>
+
+
+    {% if config.statsForManagers %}
+        {% include "stats.html" %}
+    {% endif %}
 
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap-3.3.6.min.js"></script>
