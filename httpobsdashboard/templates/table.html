@@ -17,7 +17,7 @@
         </tr>
     </thead>
     <tbody>
-    {% for hostname, results in sites[group][subGroup].items() %}
+    {% for hostname, results in sites[group][subGroup].items()|sort %}
         <tr>
             <td>
                 <a href="{% if results.tlsobs.tls %}https{% else %}http{% endif %}://{{hostname}}/" target="_blank" rel="noopener noreferrer">{{ hostname }}</a>

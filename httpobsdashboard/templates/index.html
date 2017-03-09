@@ -22,12 +22,12 @@
     </div>
 
     <div id="dashboard-results" class="col-xs-12 col-md-10 col-md-offset-1">
-        {% for group in sites %}
+        {% for group in sites|sort %}
             <h2>{{ group }}</h2>
             {% if sites[group]|length == 0 %}
               <div class="alert alert-warning">No items are in this group</div>
             {% else %}
-                {% for subGroup in sites[group] %}
+                {% for subGroup in sites[group]|sort %}
                     {% include "table.html" %}
                 {% endfor %}
             {% endif %}
