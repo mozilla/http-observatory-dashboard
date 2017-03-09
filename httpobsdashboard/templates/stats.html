@@ -14,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for group in stats %}
+        {% for group in stats|sort %}
             <tr>
                 <td><strong>{{ group }}</strong></td>
                 <td class="text-center">{{ stats[group]['passing'] }}</td>
