@@ -5,7 +5,6 @@
         "search.services.mozilla.com"
       ],
       "Addons": [
-        "addon.mozilla.org",
         "addons.mozilla.org",
         "addons.cdn.mozilla.net",
         "blocklist.addons.mozilla.org",
@@ -87,6 +86,7 @@
         "updates.push.services.mozilla.com"
       ],
       "Single Sign-On": [
+        "mozilla.okta.com",
         "sso.mozilla.com"
       ],
       "Telemetry": [
@@ -122,6 +122,7 @@
         "blog.mozilla.com",
         "blog.mozilla.org",
         "blog.seamonkey-project.org",
+        "hacks.mozilla.org",
         "planet.mozilla.org"
       ],
       "Branding & Marketing": [
@@ -133,7 +134,12 @@
       ],
       "Documentation": [
         "developer.mozilla.org",
+        "mana.mozilla.org",
         "wiki.mozilla.org"
+      ],
+      "Engineering Productivity": [
+        "bugherder.mozilla.org",
+        "treeherder.mozilla.org"
       ],
       "Mailing Lists": [
         "lists.mozilla.org",
@@ -144,9 +150,13 @@
         "careers.mozilla.org",
         "contributejson.org",
         "login.mozilla.com",
+        "mozilla.service-now.com",
         "mozillausercontent.com",
         "mozillians.org",
+        "pastebin.mozilla.org",
         "people.mozilla.org",
+        "pto.mozilla.org",
+        "public.etherpad-mozilla.org",
         "publicsuffix.org",
         "restmail.net"
       ],
@@ -162,6 +172,11 @@
       "Redirectors": [
         "click.e.mozilla.org",
         "mzl.la"
+      ],
+      "Release Engineering": [
+        "api.pub.build.mozilla.org",
+        "mozilla-releng.net",
+        "secure.pub.build.mozilla.org"
       ],
       "Shield": [
         "qsurvey.mozilla.com",
@@ -184,6 +199,27 @@
         "arewefastyet.com",
         "riskheatmap.security.mozilla.org",
         "treestatus.mozilla.org"
+      ],
+      "Taskcluster": [
+        "auth.taskcluster.net",
+        "aws-provisioner.taskcluster.net",
+        "cors-proxy.taskcluster.net",
+        "docs.taskcluster.net",
+        "events.taskcluster.net",
+        "github.taskcluster.net",
+        "hooks.taskcluster.net",
+        "index.taskcluster.net",
+        "login.taskcluster.net",
+        "notify.taskcluster.net",
+        "public-artifacts.taskcluster.net",
+        "pulse.taskcluster.net",
+        "purge-cache.taskcluster.net",
+        "queue.taskcluster.net",
+        "scheduler.taskcluster.net",
+        "schemas.taskcluster.net",
+        "secrets.taskcluster.net",
+        "taskcluster.net",
+        "tools.taskcluster.net"
       ],
       "Testing and Continuous Integration": [
         "moztrap.mozilla.org"

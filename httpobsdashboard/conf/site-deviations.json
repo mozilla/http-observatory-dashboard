@@ -21,5 +21,21 @@
   "tracking.services.mozilla.com": ["API", "Cloud Services"],
   "updates.push.services.mozilla.com": ["API", "Cloud Services"],
   "verifier.accounts.firefox.com": ["API", "Cloud Services"],
-  "webextensions.settings.services.mozilla.com": ["API", "Cloud Services"]
+  "webextensions.settings.services.mozilla.com": ["API", "Cloud Services"],
+
+  "auth.taskcluster.net": ["API"],
+  "aws-provisioner.taskcluster.net": ["API"],
+  "cors-proxy.taskcluster.net": ["API"],
+  "events.taskcluster.net": ["API"],
+  "github.taskcluster.net": ["API"],
+  "hooks.taskcluster.net": ["API"],
+  "index.taskcluster.net": ["API"],
+  "notify.taskcluster.net": ["API"],
+  "public-artifacts.taskcluster.net": ["API"],
+  "pulse.taskcluster.net": ["API"],
+  "purge-cache.taskcluster.net": ["API"],
+  "queue.taskcluster.net": ["API"],
+  "scheduler.taskcluster.net": ["API"],
+  "schemas.taskcluster.net": ["API"],
+  "secrets.taskcluster.net": ["API"]
 }
