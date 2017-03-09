@@ -54,7 +54,7 @@ def analyze(host, raw_output):
 
     # Rescore the site
     score = max(0, 100 + sum([test['score_modifier'] for test in deviated_output['httpobs']['tests'].values()]))
-    grade = GRADE_CHART[min(100, score)] if deviated_output['httpobs']['scan']['grade'] else None
+    grade = GRADE_CHART[min(100, score - score % 5)] if deviated_output['httpobs']['scan']['grade'] else None
 
     # Handle the TLS Observatory checks
     if tlsObs:
