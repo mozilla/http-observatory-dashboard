@@ -15,13 +15,21 @@
         </thead>
         <tbody>
         {% for group in stats|sort %}
-            <tr>
-                <td><strong>{{ group }}</strong></td>
-                <td class="text-center">{{ stats[group]['passing'] }}</td>
-                <td class="text-center">{{ stats[group]['quantity'] }}</td>
-                <td class="text-center">{{ stats[group]['percentage'] }}%</td>
-            </tr>
+            {% if group != 'Overall' %}
+                <tr>
+                    <td><strong>{{ group }}</strong></td>
+                    <td class="text-center">{{ stats[group]['passing'] }}</td>
+                    <td class="text-center">{{ stats[group]['quantity'] }}</td>
+                    <td class="text-center">{{ stats[group]['percentage'] }}%</td>
+                </tr>
+            {% endif %}
         {% endfor %}
+                <tr>
+                    <td><strong>Overall</strong></td>
+                    <td class="text-center">{{ stats['Overall']['passing'] }}</td>
+                    <td class="text-center">{{ stats['Overall']['quantity'] }}</td>
+                    <td class="text-center">{{ stats['Overall']['percentage'] }}%</td>
+                </tr>
         </tbody>
     </table>
 </div>
