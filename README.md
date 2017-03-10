@@ -2,12 +2,22 @@
 
 This dashboard provides a metrics dashboard to see the status of the [Observatory](https://observatory.mozilla.org/) for each link.
 
+## Prerequisites
+
+This site requires:
+
+- Python >3.4
+- Make
+  - **Linux:** most package managers have *build-essential* which provide make
+  - **MacOS:** installing Xcode provides make
 
 ## Install
 
 ```
 pip install -r requirements.txt
 ```
+
+**Note:** Some linux setups may require *pip3* instead of *pip* in the above command.
 
 ## Running
 
