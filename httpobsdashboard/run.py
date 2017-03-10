@@ -53,18 +53,24 @@ if __name__ == '__main__':
 
         # Once this is done, we need to calculate statistics
         stats = {}
-        passing = quantity = percentage = 0
+        passing = quantity = percentage = ungraded = 0
         for group in sites:
             stats[group] = {
                 'passing': 0,
                 'quantity': 0,
-                'percentage': 0
+                'percentage': 0,
+                'ungraded': 0,
             }
 
             for sub_group in sites[group]:
                 for host, analysis in sites[group][sub_group].items():
+                    # keep track of sites that have opted out
+                    if analysis.get('httpobs', {}).get('grade') is None:
+                        stats[group]['ungraded'] += 1
+                        ungraded += 1
+
                     # increment the counter if it means the minimum score
-                    if analysis.get('httpobs', {}).get('score', 0) >= httpobsdashboard.conf.statsForManagersMinScore:
+                    elif analysis.get('httpobs', {}).get('score', 0) >= httpobsdashboard.conf.statsForManagersMinScore:
                         stats[group]['passing'] += 1
                         passing += 1
 
@@ -73,13 +79,16 @@ if __name__ == '__main__':
 
             # calculate the percentage
             if stats[group]['passing'] != 0:
-                stats[group]['percentage'] = int(stats[group]['passing'] / stats[group]['quantity'] * 100)
+                stats[group]['percentage'] = int(stats[group]['passing']
+                                                 / (stats[group]['quantity'] - stats[group]['ungraded'])
+                                                 * 100)
 
         # Now calculate overall stats
         stats['Overall'] = {
             'passing': passing,
             'quantity': quantity,
-            'percentage': int(passing / quantity * 100)
+            'percentage': int((passing) / (quantity - ungraded) * 100),
+            'ungraded': ungraded
         }
 
         # Write the results to disk

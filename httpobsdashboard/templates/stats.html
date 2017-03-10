@@ -8,9 +8,10 @@
         <thead>
             <tr>
                 <th class="text-center"></th>
+                <th class="text-center">Graded Sites</th>
+                <th class="text-center">Ungraded Sites</th>
                 <th class="text-center">Sites at {{ config.statsForManagersMinGrade }} or better</th>
-                <th class="text-center">Total Sites</th>
-                <th class="text-center">Percentage</th>
+                <th class="text-center">Percentage Passing</th>
             </tr>
         </thead>
         <tbody>
@@ -18,16 +19,18 @@
             {% if group != 'Overall' %}
                 <tr>
                     <td><strong>{{ group }}</strong></td>
+                    <td class="text-center">{{ stats[group]['quantity'] - stats[group]['ungraded'] }}</td>
+                    <td class="text-center">{{ stats[group]['ungraded'] }}</td>
                     <td class="text-center">{{ stats[group]['passing'] }}</td>
-                    <td class="text-center">{{ stats[group]['quantity'] }}</td>
                     <td class="text-center">{{ stats[group]['percentage'] }}%</td>
                 </tr>
             {% endif %}
         {% endfor %}
                 <tr>
                     <td><strong>Overall</strong></td>
+                    <td class="text-center">{{ stats['Overall']['quantity'] - stats['Overall']['ungraded'] }}</td>
+                    <td class="text-center">{{ stats['Overall']['ungraded'] }}</td>
                     <td class="text-center">{{ stats['Overall']['passing'] }}</td>
-                    <td class="text-center">{{ stats['Overall']['quantity'] }}</td>
                     <td class="text-center">{{ stats['Overall']['percentage'] }}%</td>
                 </tr>
         </tbody>

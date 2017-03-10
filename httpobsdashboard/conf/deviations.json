@@ -32,6 +32,40 @@
       }
     }
   },
+  "Duplicate": {
+    "httpobs": {
+      "scan": {
+        "grade": null
+      },
+      "tests": {
+        "content-security-policy": {
+          "pass": null,
+          "score_description": "This site is an alias for another site.",
+          "score_modifier": 0
+        },
+        "subresource-integrity": {
+          "pass": null,
+          "score_description": "This site is an alias for another site.",
+          "score_modifier": 0
+        },
+        "x-content-type-options": {
+          "pass": null,
+          "score_description": "This site is an alias for another site.",
+          "score_modifier": 0
+        },
+        "x-frame-options": {
+          "pass": null,
+          "score_description": "This site is an alias for another site.",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "pass": null,
+          "score_description": "This site is an alias for another site.",
+          "score_modifier": 0
+        }
+      }
+    }
+  },
   "Static Community Site": {
     "httpobs": {
       "tests": {

@@ -37,5 +37,10 @@
   "queue.taskcluster.net": ["API"],
   "scheduler.taskcluster.net": ["API"],
   "schemas.taskcluster.net": ["API"],
-  "secrets.taskcluster.net": ["API"]
+  "secrets.taskcluster.net": ["API"],
+
+  "download-installer.cdn.mozilla.net": ["Duplicate"],
+  "ftp.mozilla.org": ["Duplicate"],
+  "releases.mozilla.com": ["Duplicate"],
+  "releases.mozilla.org": ["Duplicate"]
 }
