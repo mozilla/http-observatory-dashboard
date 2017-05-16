@@ -1,7 +1,7 @@
 import time
 
 from httpobsdashboard.conf import tlsObs, trackingDeltaDays
-from httpobsdashboard.dashboard.deviate import deviate
+from httpobsdashboard.dashboard.deviate import deviate, get_score_deviation
 
 
 GRADE_CHART = {
@@ -54,6 +54,11 @@ def analyze(host, raw_output):
 
     # Rescore the site
     score = max(0, 100 + sum([test['score_modifier'] for test in deviated_output['httpobs']['tests'].values()]))
+
+    # If it has a manual score, allow us to override that
+    score = get_score_deviation(host) if get_score_deviation(host) else score
+
+    # Regrade the site
     grade = GRADE_CHART[min(100, score - score % 5)] if deviated_output['httpobs']['scan']['grade'] else None
 
     # Handle the TLS Observatory checks

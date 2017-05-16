@@ -40,7 +40,11 @@
   "secrets.taskcluster.net": ["API"],
 
   "download-installer.cdn.mozilla.net": ["Duplicate"],
+  "download.mozilla.org": ["Duplicate"],
   "ftp.mozilla.org": ["Duplicate"],
   "releases.mozilla.com": ["Duplicate"],
-  "releases.mozilla.org": ["Duplicate"]
+  "releases.mozilla.org": ["Duplicate"],
+
+  "mana.mozilla.org": ["SSO", "Manual Grade B"],
+  "phonebook.mozilla.org": ["SSO", "Manual Grade A+"]
 }

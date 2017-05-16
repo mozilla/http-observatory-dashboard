@@ -1,48 +1,6 @@
 import httpobsdashboard.conf
 
 
-REASONS = {
-    'API': {
-        'httpobs': {
-            'tests': {
-                'content-security-policy': {
-                    'pass': None,
-                    'score_description': 'APIs don\'t contain active content and don\'t need CSP.',
-                    'score_modifier': 0
-                },
-                'subresource-integrity': {
-                    'pass': None,
-                    'score_description': 'APIs don\'t utilize subresources.',
-                    'score_modifier': 0
-                },
-                'x-frame-options': {
-                    'pass': None,
-                    'score_description': 'APIs don\'t have content to frame.',
-                    'score_modifier': 0
-                },
-                'x-xss-protection': {
-                    'pass': None,
-                    'score_description': 'APIs don\'t contain active content and don\'t need XXSSP.',
-                    'score_modifier': 0
-                },
-            }
-        }
-    },
-    'Cloud Services': {
-        'httpobs': {
-            'scan': {
-                'grade': None
-            }
-        }
-    },
-    'Windows XP Support': {
-        'tlsobs': {
-            'pass': True
-        }
-    }
-}
-
-
 def __destructive_merge(d1, d2, path=None):
     """Recursively merges d2 into d1, overwriting existing values"""
     if path is None:
@@ -67,3 +25,13 @@ def deviate(host, results):
         results = __destructive_merge(results, httpobsdashboard.conf.deviations[deviation])
 
     return results
+
+def get_score_deviation(host):
+    # See if the host has any score deviations
+    deviations = httpobsdashboard.conf.site_deviations.get(host, [])
+
+    for deviation in deviations:
+        if httpobsdashboard.conf.deviations[deviation].get('httpobs', {}).get('scan', {}).get('score'):
+            return httpobsdashboard.conf.deviations[deviation]['httpobs']['scan']['score']
+
+    return None

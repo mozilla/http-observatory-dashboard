@@ -8,7 +8,6 @@
         "addons.mozilla.org",
         "addons.cdn.mozilla.net",
         "blocklist.addons.mozilla.org",
-        "builder.addons.mozilla.org",
         "compatibility-lookup.services.mozilla.com",
         "discovery.addons.mozilla.org",
         "firefoxusercontent.com",
@@ -37,7 +36,6 @@
         "archive.mozilla.org",
         "download-installer.cdn.mozilla.net",
         "download.cdn.mozilla.net",
-        "download.mozilla.org",
         "ftp.mozilla.org",
         "releases.mozilla.com",
         "releases.mozilla.org"
@@ -50,9 +48,6 @@
         "oauth.accounts.firefox.com",
         "profile.accounts.firefox.com",
         "verifier.accounts.firefox.com"
-      ],
-      "Firefox Hello": [
-        "hello.firefox.com"
       ],
       "Firefox Settings": [
         "firefox.settings.services.mozilla.com",
@@ -67,16 +62,14 @@
         "aus4.mozilla.org",
         "aus5.mozilla.org"
       ],
+      "Internal": [
+        "login.mozilla.com",
+        "mana.mozilla.org",
+        "phonebook.mozilla.org"
+      ],
       "Location (MLS)": [
         "location.services.mozilla.com",
         "location-leaderboard.services.mozilla.com"
-      ],
-      "Marketplace": [
-        "casttv.services.mozilla.com",
-        "marketplace.firefox.com",
-        "receiptcheck.marketplace.firefox.com",
-        "static.marketplace.firefox.com",
-        "syncto.services.mozilla.com"
       ],
       "Observatory": [
         "http-observatory.security.mozilla.org",
@@ -87,9 +80,40 @@
         "push.services.mozilla.com",
         "updates.push.services.mozilla.com"
       ],
+      "Shield": [
+        "qsurvey.mozilla.com",
+        "self-repair.mozilla.org"
+      ],
+      "Source Control": [
+        "hg.mozilla.org"
+      ],
       "Single Sign-On": [
         "mozilla.okta.com",
         "sso.mozilla.com"
+      ],
+      "Taskcluster": [
+        "auth.taskcluster.net",
+        "aws-provisioner.taskcluster.net",
+        "cloud-mirror.taskcluster.net",
+        "cors-proxy.taskcluster.net",
+        "docs.taskcluster.net",
+        "events.taskcluster.net",
+        "github.taskcluster.net",
+        "hooks.taskcluster.net",
+        "index.taskcluster.net",
+        "login.taskcluster.net",
+        "notify.taskcluster.net",
+        "public-artifacts.taskcluster.net",
+        "pulse.taskcluster.net",
+        "purge-cache.taskcluster.net",
+        "queue.taskcluster.net",
+        "references.taskcluster.net",
+        "scheduler.taskcluster.net",
+        "schemas.taskcluster.net",
+        "secrets.taskcluster.net",
+        "statsum.taskcluster.net",
+        "taskcluster.net",
+        "tools.taskcluster.net"
       ],
       "Telemetry": [
         "aggregates.telemetry.mozilla.org",
@@ -99,6 +123,7 @@
         "fxos.telemetry.mozilla.org",
         "gauss.telemetry.mozilla.org",
         "incoming.telemetry.mozilla.org",
+        "loop.telemetry.mozilla.org",
         "metrics.services.mozilla.com",
         "pipeline-cep.prod.mozaws.net",
         "reports.telemetry.mozilla.org",
@@ -138,22 +163,30 @@
       ],
       "Documentation": [
         "developer.mozilla.org",
-        "mana.mozilla.org",
         "wiki.mozilla.org"
       ],
       "Engineering Productivity": [
         "bugherder.mozilla.org",
         "treeherder.mozilla.org"
       ],
+      "Firefox Hello": [
+        "hello.firefox.com"
+      ],
       "Mailing Lists": [
         "lists.mozilla.org",
         "mail.mozilla.org"
+      ],
+      "Marketplace": [
+        "casttv.services.mozilla.com",
+        "marketplace.firefox.com",
+        "receiptcheck.marketplace.firefox.com",
+        "static.marketplace.firefox.com",
+        "syncto.services.mozilla.com"
       ],
       "Miscellaneous": [
         "air.mozilla.org",
         "careers.mozilla.org",
         "contributejson.org",
-        "login.mozilla.com",
         "mozilla.service-now.com",
         "mozillausercontent.com",
         "mozillians.org",
@@ -182,17 +215,12 @@
         "mozilla-releng.net",
         "secure.pub.build.mozilla.org"
       ],
-      "Shield": [
-        "qsurvey.mozilla.com",
-        "self-repair.mozilla.org"
-      ],
       "Snippets": [
         "snippets.mozilla.com",
         "snippets.cdn.mozilla.net"
       ],
       "Source Control": [
         "dxr.mozilla.org",
-        "hg.mozilla.org",
         "searchfox.org",
         "svn.mozilla.org"
       ],
@@ -219,32 +247,6 @@
       ],
       "Support (SUMO)": [
         "support.mozilla.org"
-      ],
-      "Taskcluster": [
-        "auth.taskcluster.net",
-        "aws-provisioner.taskcluster.net",
-        "cloud-mirror.taskcluster.net",
-        "cors-proxy.taskcluster.net",
-        "docs.taskcluster.net",
-        "events.taskcluster.net",
-        "github.taskcluster.net",
-        "grafana.taskcluster.net",
-        "hooks.taskcluster.net",
-        "index.taskcluster.net",
-        "login.taskcluster.net",
-        "loop.telemetry.mozilla.org",
-        "notify.taskcluster.net",
-        "public-artifacts.taskcluster.net",
-        "pulse.taskcluster.net",
-        "purge-cache.taskcluster.net",
-        "queue.taskcluster.net",
-        "references.taskcluster.net",
-        "scheduler.taskcluster.net",
-        "schemas.taskcluster.net",
-        "secrets.taskcluster.net",
-        "statsum.taskcluster.net",
-        "taskcluster.net",
-        "tools.taskcluster.net"
       ],
       "Testing and Continuous Integration": [
         "moztrap.mozilla.org"
@@ -279,7 +281,6 @@
         "blog.lizardwrangler.com",
         "blog.mozilla-hispano.org",
         "blog.nightly.mozilla.org",
-        "book.mozillafoundation.org",
         "box.mozilla-hispano.org",
         "brasstacks.mozilla.com",
         "broker.thunderbird.net",
@@ -318,7 +319,6 @@
         "forum.mozilla-russia.org",
         "forum.mozilla-srbija.org",
         "forum.mozillascience.org",
-        "foxyeah.mozilla.org",
         "ftp-ssl.mozilla.org",
         "ftp.eu.mozilla.org",
         "fuzzmanager.fuzzing.mozilla.org",
@@ -330,7 +330,6 @@
         "go.mozilla.org",
         "goggles.mozilla.org",
         "gpg.mozilla.org",
-        "heatmap.mozillalabs.com",
         "hg.cdn.mozilla.net",
         "hivelearningnetworks.org",
         "hivenyc.org",
@@ -378,7 +377,6 @@
         "nucleus.mozilla.org",
         "openbadges.org",
         "opennews.org",
-        "opensearch-live.mozillamessaging.com",
         "openwebdevice.org",
         "partners.mozilla.org",
         "passwordreset.mozilla.org",
@@ -414,7 +412,6 @@
         "togetherjs.com",
         "toolkit.mozilla.org",
         "trackertest.org",
-        "training.webmakerprototypes.org",
         "triagebot.mozilla.org",
         "useradvocacy.mozilla.org",
         "videos-origin.mozilla.org",

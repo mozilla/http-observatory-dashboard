@@ -40,27 +40,103 @@
       "tests": {
         "content-security-policy": {
           "pass": null,
-          "score_description": "This site is an alias for another site.",
+          "score_description": "This site is an alias or redirect for another site.",
           "score_modifier": 0
         },
         "subresource-integrity": {
           "pass": null,
-          "score_description": "This site is an alias for another site.",
+          "score_description": "This site is an alias or redirect for another site.",
           "score_modifier": 0
         },
         "x-content-type-options": {
           "pass": null,
-          "score_description": "This site is an alias for another site.",
+          "score_description": "This site is an alias or redirect for another site.",
           "score_modifier": 0
         },
         "x-frame-options": {
           "pass": null,
-          "score_description": "This site is an alias for another site.",
+          "score_description": "This site is an alias or redirect for another site.",
           "score_modifier": 0
         },
         "x-xss-protection": {
           "pass": null,
-          "score_description": "This site is an alias for another site.",
+          "score_description": "This site is an alias or redirect for another site.",
+          "score_modifier": 0
+        }
+      }
+    }
+  },
+  "Manual Grade A+": {
+    "httpobs": {
+      "scan": {
+        "score": 100
+      }
+    }
+  },
+  "Manual Grade A": {
+    "httpobs": {
+      "scan": {
+        "score": 90
+      }
+    }
+  },
+  "Manual Grade B": {
+    "httpobs": {
+      "scan": {
+        "score": 80
+      }
+    }
+  },
+  "Manual Grade C": {
+    "httpobs": {
+      "scan": {
+        "score": 60
+      }
+    }
+  },
+  "Manual Grade D": {
+    "httpobs": {
+      "scan": {
+        "score": 40
+      }
+    }
+  },
+  "Manual Grade F": {
+    "httpobs": {
+      "scan": {
+        "score": 20
+      }
+    }
+  },
+  "SSO": {
+    "httpobs": {
+      "scan": {
+        "grade": null
+      },
+      "tests": {
+        "content-security-policy": {
+          "pass": null,
+          "score_description": "This site is lies behind single-sign-on and can't be accurately graded.",
+          "score_modifier": 0
+        },
+        "subresource-integrity": {
+          "pass": null,
+          "score_description": "This site is lies behind single-sign-on and can't be accurately graded.",
+          "score_modifier": 0
+        },
+        "x-content-type-options": {
+          "pass": null,
+          "score_description": "This site is lies behind single-sign-on and can't be accurately graded.",
+          "score_modifier": 0
+        },
+        "x-frame-options": {
+          "pass": null,
+          "score_description": "This site is lies behind single-sign-on and can't be accurately graded.",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "pass": null,
+          "score_description": "This site is lies behind single-sign-on and can't be accurately graded.",
           "score_modifier": 0
         }
       }

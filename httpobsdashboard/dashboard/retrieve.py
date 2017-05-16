@@ -84,6 +84,7 @@ def retrieve(host):
 
 
 def __get_http_observatory(host):
+    print(host)
     api_url = os.environ.get('HTTPOBS_API_URL') or 'https://http-observatory.security.mozilla.org/api/v1'
 
     r = {}
@@ -174,7 +175,7 @@ def __get_tls_observatory(host):
     return r
 
 
-def __poll(url, key, values=None, method='GET', headers=None, data=None, timeout=300, interval=1.0):
+def __poll(url, key, values=None, method='GET', headers=None, data=None, timeout=120, interval=1.0):
     if headers is None:
         headers = {}
 
