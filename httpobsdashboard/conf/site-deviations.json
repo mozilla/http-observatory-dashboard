@@ -14,6 +14,7 @@
   "push.services.mozilla.com": ["API", "Cloud Services"],
   "search.services.mozilla.com": ["API", "Cloud Services"],
   "shavar.services.mozilla.com": ["API", "Cloud Services"],
+  "status.services.mozilla.com": ["Cloud Services"],
   "sync-264-us-west-2.sync.services.mozilla.com": ["API", "Cloud Services"],
   "tiles.services.mozilla.com": ["API", "Cloud Services"],
   "tls-observatory.services.mozilla.com": ["API", "Cloud Services"],
