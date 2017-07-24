@@ -43,6 +43,7 @@
   "download-installer.cdn.mozilla.net": ["Duplicate"],
   "download.mozilla.org": ["Duplicate"],
   "ftp.mozilla.org": ["Duplicate"],
+  "hello.firefox.com": ["Duplicate"],
   "releases.mozilla.com": ["Duplicate"],
   "releases.mozilla.org": ["Duplicate"],
 
