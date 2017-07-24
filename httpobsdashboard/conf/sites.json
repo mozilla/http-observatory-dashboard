@@ -349,9 +349,6 @@
         "static.marketplace.firefox.com",
         "syncto.services.mozilla.com"
       ],
-      "Miscellaneous": [
-        "people-mozilla.org"
-      ],
       "Staging &amp; Instances": [
         "activedata.allizom.org",
         "addons-dev-cdn.allizom.org",
@@ -367,9 +364,6 @@
         "services.addons-dev.allizom.org",
         "services.addons.allizom.org",
         "www.allizom.org"
-      ], 
-      "Testing and Continuous Integration": [
-        "moztrap.mozilla.org"
       ],
       "Uncategorized": [
         "api.mig-stage.security.mozilla.org",
@@ -388,11 +382,9 @@
         "blog.mozilla-hispano.org",
         "box.mozilla-hispano.org",
         "broker.thunderbird.net",
-        "bugzfeed.mozilla.org",
         "bzr.mozilla.org",
         "cdn.mozilla.net",
         "coalesce.mozilla-releng.net",
-        "community.openbadges.org",
         "connected.mozilla.org",
         "dev.mozilla-srbija.org",
         "dev.mozilla.jp",
@@ -454,7 +446,6 @@
         "stuff.webmaker.org",
         "thimble.webmaker.org",
         "thimbleprojects.org",
-        "useradvocacy.mozilla.org",
         "videos-origin.mozilla.org",
         "videos.cdn.mozilla.net",
         "view.e.mozilla.org",
