@@ -3,9 +3,6 @@
   "api.accounts.firefox.com": ["API", "Cloud Services"],
   "archive.mozilla.org": ["Windows XP Support"],
   "loop.services.mozilla.com": ["API", "Cloud Services"],
-  "download-installer.cdn.mozilla.net": ["Windows XP Support"],
-  "download.cdn.mozilla.net": ["Windows XP Support"],
-  "download.mozilla.org": ["Windows XP Support"],
   "firefox.settings.services.mozilla.com": ["API", "Cloud Services"],
   "mozilla.org": ["Windows XP Support"],
   "oauth.accounts.firefox.com": ["API", "Cloud Services"],
@@ -26,7 +23,6 @@
 
   "auth.taskcluster.net": ["API"],
   "aws-provisioner.taskcluster.net": ["API"],
-  "cors-proxy.taskcluster.net": ["API"],
   "events.taskcluster.net": ["API"],
   "github.taskcluster.net": ["API"],
   "hooks.taskcluster.net": ["API"],
@@ -40,12 +36,17 @@
   "schemas.taskcluster.net": ["API"],
   "secrets.taskcluster.net": ["API"],
 
+  "download.cdn.mozilla.net": ["Duplicate"],
   "download-installer.cdn.mozilla.net": ["Duplicate"],
   "download.mozilla.org": ["Duplicate"],
   "ftp.mozilla.org": ["Duplicate"],
   "hello.firefox.com": ["Duplicate"],
   "releases.mozilla.com": ["Duplicate"],
   "releases.mozilla.org": ["Duplicate"],
+
+  "firefoxusercontent.com": ["Sandboxed"],
+  "mdn.mozillademos.org": ["Sandboxed"],
+  "mozillausercontent.com": ["Sandboxed"],
 
   "mana.mozilla.org": ["SSO", "Manual Grade B"],
   "phonebook.mozilla.org": ["SSO", "Manual Grade A+"]

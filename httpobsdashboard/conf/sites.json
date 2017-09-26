@@ -10,7 +10,6 @@
         "blocklist.addons.mozilla.org",
         "compatibility-lookup.services.mozilla.com",
         "discovery.addons.mozilla.org",
-        "firefoxusercontent.com",
         "services.addons.mozilla.org",
         "static.addons.mozilla.net",
         "versioncheck-bg.addons.mozilla.org",
@@ -43,8 +42,6 @@
       "Firefox Accounts": [
         "accounts.firefox.com",
         "api.accounts.firefox.com",
-        "firefoxusercontent.com",
-        "mozillausercontent.com",
         "oauth.accounts.firefox.com",
         "profile.accounts.firefox.com",
         "verifier.accounts.firefox.com"
@@ -95,7 +92,6 @@
         "auth.taskcluster.net",
         "aws-provisioner.taskcluster.net",
         "cloud-mirror.taskcluster.net",
-        "cors-proxy.taskcluster.net",
         "docs.taskcluster.net",
         "events.taskcluster.net",
         "github.taskcluster.net",
@@ -129,8 +125,7 @@
         "reports.telemetry.mozilla.org",
         "start.telemetry.mozilla.org",
         "telemetry.mozilla.org",
-        "telemetry-experiment.cdn.mozilla.net",
-        "metrics.services.mozilla.com"
+        "telemetry-experiment.cdn.mozilla.net"
       ],
       "Test Pilot": [
         "testpilot.firefox.com"
@@ -162,7 +157,12 @@
       "Communication Tools": [
         "www.standu.ps"
       ],
+      "Content Hosting": [
+        "firefoxusercontent.com",
+        "mozillausercontent.com"
+      ],
       "Documentation": [
+        "design.firefox.com",
         "developer.mozilla.org",
         "wiki.mozilla.org"
       ],
@@ -192,8 +192,7 @@
         "fundraising.mozilla.org",
         "games.mozilla.org",
         "internethealthreport.org",
-        "learning.mozilla.org",
-        "petitions.mozilla.org"
+        "learning.mozilla.org"
       ],
       "Redirectors": [
         "click.e.mozilla.org",
@@ -288,11 +287,9 @@
         "openbadges.org",
         "passwordreset.mozilla.org",
         "planet.bugzilla.org",
-        "planet.firefox.com",
         "planet.mozilla.de",
         "planet.webmademovies.org",
         "platform-status.mozilla.org",
-        "plugins.mozilla.org",
         "product-details.mozilla.org",
         "pulse.mozilla.org",
         "pulseguardian.mozilla.org",
@@ -360,7 +357,6 @@
         "crash-stats.allizom.org",
         "discovery.addons-dev.allizom.org",
         "discovery.addons.allizom.org",
-        "mozillausercontent.com",
         "services.addons-dev.allizom.org",
         "services.addons.allizom.org",
         "www.allizom.org"
@@ -392,7 +388,6 @@
         "download-origin.cdn.mozilla.net",
         "embedly-proxy.services.mozilla.com",
         "events.webmaker.org",
-        "fb-affiliates.mozilla.org",
         "fhr.data.mozilla.com",
         "firefox-source-docs.mozilla.org",
         "foro.mozilla-hispano.org",

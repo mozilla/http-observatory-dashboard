@@ -108,6 +108,13 @@
       }
     }
   },
+  "Sandboxed": {
+    "httpobs": {
+      "scan": {
+        "grade": null
+      }
+    }
+  },
   "SSO": {
     "httpobs": {
       "scan": {
