@@ -49,5 +49,6 @@
   "mozillausercontent.com": ["Sandboxed"],
 
   "mana.mozilla.org": ["SSO", "Manual Grade B"],
-  "phonebook.mozilla.org": ["SSO", "Manual Grade A+"]
+  "phonebook.mozilla.org": ["SSO", "Manual Grade A+"],
+  "secure.pub.build.mozilla.org": ["SSO", "Manual Grade B"]
 }
