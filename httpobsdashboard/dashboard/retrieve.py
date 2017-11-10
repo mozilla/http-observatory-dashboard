@@ -24,7 +24,7 @@ def mass_scan_priming(hosts):
 
         # Get the queue availability
         try:
-            r = s.get(HTTPOBS_API_URL + '/getScannerStates').json()
+            r = s.get(HTTPOBS_API_URL + '/__stats__?verbose=true').json()['states']
         except:
             time.sleep(5)
             continue

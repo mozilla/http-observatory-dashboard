@@ -43,10 +43,13 @@ def analyze(host, raw_output):
     deltax = delta = 0
     if deviated_output['httpobs']['scan']['history']:
         now = int(time.time())
+        baseline = deviated_output['httpobs']['scan']['history'][0].get('score', 0)
+
         for entry in deviated_output['httpobs']['scan']['history']:
-            if now - entry.get('end_time_unix_timestamp', 0) < trackingDeltaDays * 24 * 60 * 60:
-                deltax = (
-                    deviated_output['httpobs']['scan']['history'][-1].get('score', 0) - entry.get('score', 0))
+            if now - entry.get('end_time_unix_timestamp', 0) > trackingDeltaDays * 24 * 60 * 60:
+                baseline = entry.get('score', 0)
+            else:
+                deltax = deviated_output['httpobs']['scan']['history'][-1].get('score', 0) - baseline
                 break
 
         delta = (deviated_output['httpobs']['scan']['history'][-1].get('score', 0) -
