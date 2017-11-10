@@ -40,6 +40,12 @@
   "schemas.taskcluster.net": ["API"],
   "secrets.taskcluster.net": ["API"],
 
+  "itisatracker.com": ["HTTP Only"],
+  "itisatracker.org": ["HTTP Only"],
+  "trackertest.org": ["HTTP Only"],
+  "pypi.pub.build.mozilla.org": ["HTTP Only", "Package Repository"],
+  "mixed-content-tests-mozilla.org": ["HTTP Only"],
+
   "download-installer.cdn.mozilla.net": ["Duplicate"],
   "download.mozilla.org": ["Duplicate"],
   "ftp.mozilla.org": ["Duplicate"],
