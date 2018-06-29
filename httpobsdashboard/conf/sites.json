@@ -199,7 +199,6 @@
         "mzl.la"
       ],
       "Release Engineering": [
-        "api.pub.build.mozilla.org",
         "mozilla-releng.net",
         "secure.pub.build.mozilla.org"
       ],
