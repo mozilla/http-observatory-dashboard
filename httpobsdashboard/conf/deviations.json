@@ -180,5 +180,42 @@
     "tlsobs": {
       "pass": true
     }
+  },
+  "HTTP Only": {
+    "httpobs": {
+      "tests": {
+        "strict-transport-security": {
+          "pass": null,
+          "score_description": "Allow HTTP without an HTTPS redirect.",
+          "score_modifier": 0
+        },
+        "redirection-missing": {
+          "pass": null,
+          "score_description": "Allow HTTP without an HTTPS redirect.",
+          "score_modifier": 0
+        }
+      }
+    }
+  },
+  "Package Repository": {
+    "httpobs": {
+      "tests": {
+        "content-security-policy": {
+          "pass": null,
+          "score_description": "Repository does not contain active content and does not need CSP.",
+          "score_modifier": 0
+        },
+        "subresource-integrity": {
+          "pass": null,
+          "score_description": "Repository does not utilize subresources.",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "pass": null,
+          "score_description": "Repository does not contain active content and does not need XXSSP.",
+          "score_modifier": 0
+        }
+      }
+    }
   }
 }
